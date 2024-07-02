@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("BlazorApp1_MudBlazor")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+15cdcf96286fb09734c4d631f90a24bdbc3432a2")]
 [assembly: System.Reflection.AssemblyProductAttribute("BlazorApp1_MudBlazor")]
 [assembly: System.Reflection.AssemblyTitleAttribute("BlazorApp1_MudBlazor")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
