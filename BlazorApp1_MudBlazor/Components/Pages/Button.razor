@@ -1,0 +1,215 @@
+@page "/button"
+@using RosbridgeNet.RosbridgeClient.Common.Interfaces
+@using RosbridgeNet.RosbridgeClient.ProtocolV2.Generics
+@inject IRosbridgeMessageDispatcher MessageDispatcher
+@using Microsoft.AspNetCore.Components.Web
+@rendermode InteractiveServer
+
+<MudThemeProvider />
+<MudDialogProvider />
+<MudSnackbarProvider />
+
+<h3>Rosbridge Communication</h3>
+<MudButton @onclick="Test">Test</MudButton>
+
+<MudContainer MaxWidth="MaxWidth.Large" Style="padding: 16px;">
+    <MudGrid>
+        <MudItem xs="12" md="3">
+            <MudContainer Style="width: 290px; height: 330px; background-color: #BFF7F7; padding: 16px; border-radius: 16px;">
+                <p>Nhấn các phím để điều khiển</p>
+                <div tabindex="0" style="border: 1px solid black; padding: 10px; width: 260px; height: 270px; overflow: auto;"  @onkeydown="HandleKeyPress" >
+                    <table style="width: 100%; height: 100%; border-collapse: collapse; text-align: center;">
+                        <tr>
+                            <td></td>
+                            <td>
+                                <MudButton Variant="Variant.Filled" EndIcon="@Icons.Material.Filled.ArrowUpward" Color="Color.Primary" Style="width: 50px; height: 50px; margin: 5px;" @onkeydown="HandleKeyPress" @onclick="MoveForward"><b>i</b></MudButton>
+                            </td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <MudButton Variant="Variant.Filled" Color="Color.Primary" Style="width: 50px; height: 50px; margin: 5px;" @onkeydown="HandleKeyPress" @onclick="MoveForwardLeft"><b>u</b></MudButton>
+                            </td>
+                            <td>
+                                <MudButton Variant="Variant.Filled" EndIcon="@Icons.Material.Filled.Stop" Color="Color.Primary" Style="width: 50px; height: 50px; margin: 5px;" @onkeydown="HandleKeyPress" @onclick="Stop"><b>k</b></MudButton>
+                            </td>
+                            <td>
+                                <MudButton Variant="Variant.Filled" Color="Color.Primary" Style="width: 50px; height: 50px; margin: 5px;" @onkeydown="HandleKeyPress" @onclick="MoveForwardRight"><b>o</b></MudButton>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <MudButton Variant="Variant.Filled" Color="Color.Primary" Style="width: 50px; height: 50px; margin: 5px;" @onkeydown="HandleKeyPress" @onclick="TurnCounterClockwise"><b>j</b></MudButton>
+                            </td>
+                            <td>
+                                <MudButton Variant="Variant.Filled" Color="Color.Primary" Style="width: 50px; height: 50px; margin: 5px;" @onkeydown="HandleKeyPress" @onclick="MoveBackward"><b>,</b></MudButton>
+                            </td>
+                            <td>
+                                <MudButton Variant="Variant.Filled" Color="Color.Primary" Style="width: 50px; height: 50px; margin: 5px;" @onkeydown="HandleKeyPress" @onclick="TurnClockwise"><b>l</b></MudButton>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>
+                                <MudButton Variant="Variant.Filled" Color="Color.Primary" Style="width: 50px; height: 50px; margin: 5px;" @onkeydown="HandleKeyPress" @onclick="MoveBackwardLeft"><b>m</b></MudButton>
+                            </td>
+                            <td></td>
+                        </tr>
+                    </table>
+                </div>
+            </MudContainer>
+        </MudItem>
+    </MudGrid>
+</MudContainer>
+
+
+@code
+{
+
+    protected override async Task OnInitializedAsync()
+    {
+        await base.OnInitializedAsync();
+    }
+
+    private async Task PublishMessage(Twist twist)
+    {
+        try
+        {
+            var publisher = new RosPublisher<Twist>(MessageDispatcher, "/cmd_vel");
+            await publisher.AdvertiseAsync();
+            await publisher.PublishAsync(twist);
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine(ex.ToString());
+        }
+    }
+
+    private async Task HandleKeyPress(KeyboardEventArgs e)
+    {
+        switch (e.Key)
+        {
+            case "i":
+                await MoveForward();
+                break;
+            case "u":
+                await MoveForwardLeft();
+                break;
+            case "o":
+                await MoveForwardRight();
+                break;
+            case "k":
+                await Stop();
+                break;
+            case "j":
+                await TurnCounterClockwise();
+                break;
+            case "l":
+                await TurnClockwise();
+                break;
+            case ",":
+                await MoveBackward();
+                break;
+            case "m":
+                await MoveBackwardLeft();
+                break;
+            case ".":
+                await MoveBackwardRight();
+                break;
+        }
+    }
+
+    public float a = 0.2f;
+    public float b = 0.5f;
+
+    private async Task MoveForward()
+    {
+        await PublishMessage(new Twist()
+            {
+                linear = new Vector() { x = a, y = 0, z = 0 },
+                angular = new Vector() { x = 0, y = 0, z = 0 }
+            });
+    }
+
+    private async Task MoveForwardLeft()
+    {
+        await PublishMessage(new Twist()
+            {
+                linear = new Vector() { x = a, y = 0, z = 0 },
+                angular = new Vector() { x = 0, y = 0, z = b }
+            });
+    }
+
+    private async Task MoveForwardRight()
+    {
+        await PublishMessage(new Twist()
+            {
+                linear = new Vector() { x = a, y = 0, z = 0 },
+                angular = new Vector() { x = 0, y = 0, z = -b }
+            });
+    }
+
+    private async Task Stop()
+    {
+        await PublishMessage(new Twist()
+            {
+                linear = new Vector() { x = 0, y = 0, z = 0 },
+                angular = new Vector() { x = 0, y = 0, z = 0 }
+            });
+    }
+
+    private async Task TurnClockwise()
+    {
+        await PublishMessage(new Twist()
+            {
+                linear = new Vector() { x = 0, y = 0, z = 0 },
+                angular = new Vector() { x = 0, y = 0, z = -b }
+            });
+    }
+
+    private async Task TurnCounterClockwise()
+    {
+        await PublishMessage(new Twist()
+            {
+                linear = new Vector() { x = 0, y = 0, z = 0 },
+                angular = new Vector() { x = 0, y = 0, z = b }
+            });
+    }
+
+    private async Task MoveBackward()
+    {
+        await PublishMessage(new Twist()
+            {
+                linear = new Vector() { x = -a, y = 0, z = 0 },
+                angular = new Vector() { x = 0, y = 0, z = 0 }
+            });
+    }
+
+    private async Task MoveBackwardLeft()
+    {
+        await PublishMessage(new Twist()
+            {
+                linear = new Vector() { x = -a, y = 0, z = 0 },
+                angular = new Vector() { x = 0, y = 0, z = b }
+            });
+    }
+
+    private async Task MoveBackwardRight()
+    {
+        await PublishMessage(new Twist()
+            {
+                linear = new Vector() { x = -a, y = 0, z = 0 },
+                angular = new Vector() { x = 0, y = 0, z = -b }
+            });
+    }
+
+    private void Test()
+    {
+        Console.WriteLine("test");
+    }
+
+    public void Dispose()
+    {
+        // Dọn dẹp tài nguyên nếu cần
+    }
+}

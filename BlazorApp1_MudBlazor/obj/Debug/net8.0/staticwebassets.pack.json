@@ -1,0 +1,49 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\letha\\OneDrive\\dotNET_simple\\BlazorApp1_MudBlazor\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\BlazorApp1_MudBlazor.bundle.scp.css",
+      "PackagePath": "staticwebassets\\BlazorApp1_MudBlazor.bundle.scp.css"
+    },
+    {
+      "Id": "C:\\Users\\letha\\OneDrive\\dotNET_simple\\BlazorApp1_MudBlazor\\wwwroot\\app.css",
+      "PackagePath": "staticwebassets\\app.css"
+    },
+    {
+      "Id": "C:\\Users\\letha\\OneDrive\\dotNET_simple\\BlazorApp1_MudBlazor\\wwwroot\\bootstrap\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\bootstrap\\bootstrap.min.css"
+    },
+    {
+      "Id": "C:\\Users\\letha\\OneDrive\\dotNET_simple\\BlazorApp1_MudBlazor\\wwwroot\\bootstrap\\bootstrap.min.css.map",
+      "PackagePath": "staticwebassets\\bootstrap\\bootstrap.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\letha\\OneDrive\\dotNET_simple\\BlazorApp1_MudBlazor\\wwwroot\\css\\styles.css",
+      "PackagePath": "staticwebassets\\css\\styles.css"
+    },
+    {
+      "Id": "C:\\Users\\letha\\OneDrive\\dotNET_simple\\BlazorApp1_MudBlazor\\wwwroot\\favicon.png",
+      "PackagePath": "staticwebassets\\favicon.png"
+    },
+    {
+      "Id": "C:\\Users\\letha\\OneDrive\\dotNET_simple\\BlazorApp1_MudBlazor\\wwwroot\\js\\interop.js",
+      "PackagePath": "staticwebassets\\js\\interop.js"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.BlazorApp1_MudBlazor.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.BlazorApp1_MudBlazor.props",
+      "PackagePath": "build\\BlazorApp1_MudBlazor.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.BlazorApp1_MudBlazor.props",
+      "PackagePath": "buildMultiTargeting\\BlazorApp1_MudBlazor.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.BlazorApp1_MudBlazor.props",
+      "PackagePath": "buildTransitive\\BlazorApp1_MudBlazor.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

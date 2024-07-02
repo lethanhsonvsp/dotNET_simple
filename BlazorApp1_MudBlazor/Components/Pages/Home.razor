@@ -1,0 +1,203 @@
+﻿@page "/"
+@rendermode InteractiveServer
+
+<PageTitle>Home</PageTitle>
+
+<h1>Hello, world!</h1>
+
+Welcome to your new app.
+
+<MudFab Color="Color.Secondary" StartIcon="@Icons.Material.Filled.Add" Size="Size.Medium" />
+
+<MudThemeProvider />
+<MudDialogProvider />
+<MudSnackbarProvider />
+
+
+<!-- 
+    <MudContainer MaxWidth="MaxWidth.Large" Style="background-color: #e0e0e0; padding: 16px;">
+ -->
+<MudContainer MaxWidth="MaxWidth.Large" Style="padding: 16px;">
+    <MudGrid>
+        <MudItem xs="12" md="4">
+            <MudContainer Style="width: 100%; height: 350px; background-color: #C29ED9; padding: 16px;">
+                <MudText Typo="Typo.h6">Bên Trái</MudText>
+                <MudButton Variant="Variant.Filled" Color="Color.Primary">Button</MudButton>
+            </MudContainer>
+        </MudItem>
+        <MudItem xs="12" md="4">
+            <MudContainer Style="width: 100%; height: 350px; background-color: #f5f5f5; padding: 16px;">
+                <MudText Typo="Typo.h6">Giữa</MudText>
+                <MudButton Variant="Variant.Filled" Color="Color.Primary">Button</MudButton>
+            </MudContainer>
+        </MudItem>
+        <!--
+        <MudItem xs="12" md="4">
+            <MudContainer Style="width: 100%; height: 350px; background-color: #f5f5f5; padding: 16px;">
+                <MudText Typo="Typo.h6">Bên Phải</MudText>
+                <MudButton Variant="Variant.Filled" Color="Color.Primary">Button</MudButton>
+            </MudContainer>
+        </MudItem>
+         -->
+    </MudGrid>
+</MudContainer>
+
+<MudContainer MaxWidth="MaxWidth.Large" Style="padding: 16px;">
+    <MudGrid>
+        <MudItem xs="12">
+            <MudContainer Style="width: 100%; height: 500px; background-color: #f5f5f5; padding: 16px; border-radius: 16px;">
+                <MudText Typo="Typo.h6">Bên Trái</MudText>
+                <MudButton Variant="Variant.Filled" EndIcon="@Icons.Material.Filled.ArrowBack" Color="Color.Primary">Button</MudButton>
+            </MudContainer>
+        </MudItem>
+    </MudGrid>
+</MudContainer>
+
+
+<MudText Typo="Typo.h4">Simple MudBlazor Events Demo</MudText>
+
+<!-- Sự kiện OnClick -->
+<MudButton Variant="Variant.Filled" Color="Color.Primary" OnClick="HandleClick">Click me</MudButton>
+
+<!-- Sự kiện OnDoubleClick -->
+<MudButton Variant="Variant.Filled" Color="Color.Secondary" OnDoubleClick="HandleDoubleClick">Double Click me</MudButton>
+
+<!-- Sự kiện OnRightClick -->
+<MudButton Variant="Variant.Filled" Color="Color.Tertiary" OnMouseDown="HandleRightClick">Right Click me</MudButton>
+
+<!-- Sự kiện OnInput -->
+<MudTextField @bind-Value="inputValue" T="string" Placeholder="Type something..." OnInput="HandleInput"/>
+
+<!-- Sự kiện OnCheckedChanged -->
+<!--<MudCheckbox @bind-Checked="isChecked" T="bool?" OnCheckedChanged="HandleCheckedChanged">Check me</MudCheckbox>-->
+
+<!-- Sự kiện OnKeyPress -->
+<!--<MudTextField T="string" Placeholder="Press any key..." OnKeyPress="HandleKeyPress"/>-->
+
+<!-- Sự kiện OnKeyDown -->
+<MudTextField T="string" Placeholder="Key down..." OnKeyDown="HandleKeyDown"/>
+
+<!-- Sự kiện OnKeyUp -->
+<MudTextField T="string" Placeholder="Key up..." OnKeyUp="HandleKeyUp"/>
+
+<!-- Sự kiện OnMouseOver và OnMouseOut -->
+<MudText @onmouseover="HandleMouseOver" @onmouseout="HandleMouseOut">Hover over me!</MudText>
+
+<!-- Sự kiện OnMouseMove -->
+<MudText @onmousemove="HandleMouseMove">Move mouse over me!</MudText>
+
+<!-- Sự kiện OnMouseDown -->
+<MudText @onmousedown="HandleMouseDown">Mouse down on me!</MudText>
+
+<!-- Sự kiện OnMouseUp -->
+<MudText @onmouseup="HandleMouseUp">Mouse up on me!</MudText>
+
+<!-- Sự kiện OnFocus -->
+<MudTextField T="string" Placeholder="Focus on me..." OnFocus="HandleFocus"/>
+
+<!-- Sự kiện OnBlur -->
+<MudTextField T="string" Placeholder="Blur me..." OnBlur="HandleBlur"/>
+
+<!-- Sự kiện OnChange -->
+<MudSelect T="string" @bind-Value="selectedValue" OnChange="HandleChange">
+    <!--<MudSelectItem Value="Option1">Option 1</MudSelectItem> -->
+    <!--<MudSelectItem Value="Option2">Option 2</MudSelectItem> -->
+</MudSelect>
+<MudButtonGroup Color="Color.Primary" Variant="Variant.Outlined" OverrideStyles="_overrideStyles">
+    <MudButton Color="Color.Primary" Variant="Variant.Outlined">One</MudButton>
+    <MudButton Color="Color.Warning" Variant="Variant.Outlined">Two</MudButton>
+</MudButtonGroup>
+<MudSwitch @bind-Checked="@_overrideStyles" Label="Override styles" Color="Color.Primary" />
+
+@code {
+    private bool _overrideStyles;
+    private string inputValue = string.Empty;
+    private bool isChecked = false;
+    private string selectedValue = string.Empty;
+
+    private void HandleClick()
+    {
+        Console.WriteLine("Button clicked");
+    }
+
+    private void HandleDoubleClick()
+    {
+        Console.WriteLine("Button double-clicked");
+    }
+
+    private void HandleRightClick(MouseEventArgs e)
+    {
+        if (e.Button == 2) // Button 2 is the right mouse button
+        {
+            Console.WriteLine("Right button clicked");
+        }
+    }
+
+    private void HandleInput(ChangeEventArgs e)
+    {
+        //inputValue = e.Value.ToString();
+        Console.WriteLine($"Input changed: {inputValue}");
+    }
+
+    private void HandleCheckedChanged(bool? isChecked)
+    {
+        this.isChecked = isChecked ?? false;
+        Console.WriteLine($"Checkbox checked: {this.isChecked}");
+    }
+
+    private void HandleKeyPress(KeyboardEventArgs e)
+    {
+        Console.WriteLine($"Key pressed: {e.Key}");
+    }
+
+    private void HandleKeyDown(KeyboardEventArgs e)
+    {
+        Console.WriteLine($"Key down: {e.Key}");
+    }
+
+    private void HandleKeyUp(KeyboardEventArgs e)
+    {
+        Console.WriteLine($"Key up: {e.Key}");
+    }
+
+    private void HandleMouseOver()
+    {
+        Console.WriteLine("Mouse over text");
+    }
+
+    private void HandleMouseOut()
+    {
+        Console.WriteLine("Mouse out of text");
+    }
+
+    private void HandleMouseMove(MouseEventArgs e)
+    {
+        Console.WriteLine($"Mouse move: {e.ClientX}, {e.ClientY}");
+    }
+
+    private void HandleMouseDown(MouseEventArgs e)
+    {
+        Console.WriteLine("Mouse down");
+    }
+
+    private void HandleMouseUp(MouseEventArgs e)
+    {
+        Console.WriteLine("Mouse up");
+    }
+
+    private void HandleFocus(FocusEventArgs e)
+    {
+        Console.WriteLine("Text field focused");
+    }
+
+    private void HandleBlur(FocusEventArgs e)
+    {
+        Console.WriteLine("Text field lost focus");
+    }
+
+    private void HandleChange(string value)
+    {
+        selectedValue = value;
+        Console.WriteLine($"Selected value: {selectedValue}");
+    }
+}

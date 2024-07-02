@@ -1,0 +1,61 @@
+﻿@page "/map-subscriber"
+@inject IRosbridgeMessageDispatcher MessageDispatcher
+@rendermode InteractiveServer
+@using Newtonsoft.Json
+@using RosbridgeNet.RosbridgeClient.Common.Attributes
+@using RosbridgeNet.RosbridgeClient.ProtocolV2
+@using RosbridgeNet.RosbridgeClient.ProtocolV2.Generics
+@using RosbridgeNet.RosbridgeClient.ProtocolV2.Generics.Interfaces
+@using RosbridgeNet.RosbridgeClient.Common.Interfaces
+@using Microsoft.AspNetCore.Components.Web
+@using Newtonsoft.Json.Linq
+@using MudBlazor
+@using System.Net.WebSockets
+@using System.Text.Json
+@using System.Drawing
+@using System.Drawing.Imaging
+@using System.IO
+
+<MudThemeProvider />
+<MudDialogProvider />
+<MudSnackbarProvider />
+
+<h3>Blazor Rosbridge Map Subscriber</h3>
+
+<div>
+    <img src="data:image/png;base64,@base64MapImage" alt="Map Image" style="max-width:100%; height:auto;" />
+</div>
+
+@code {
+    private ClientWebSocket rosSocket = new ClientWebSocket();
+    private string base64MapImage = string.Empty;
+
+    // Khởi tạo và đăng ký sự kiện
+    protected override async Task OnInitializedAsync()
+    {
+        Console.WriteLine("Component Initialized");
+        await ConnectRosbridge();
+    }
+
+    private async Task ConnectRosbridge()
+    {
+        try
+        {
+            Uri serverUri = new Uri("ws://192.168.137.218:9090");
+            await rosSocket.ConnectAsync(serverUri, CancellationToken.None);
+
+            // Subscribe to the topic "/map"
+            string subscribeRequest = "{\"op\":\"subscribe\",\"topic\":\"/map\"}";
+            byte[] subscribeRequestBytes = System.Text.Encoding.UTF8.GetBytes(subscribeRequest);
+            await rosSocket.SendAsync(new ArraySegment<byte>(subscribeRequestBytes), WebSocketMessageType.Text, true, CancellationToken.None);
+
+            // Start receiving messages
+
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Error connecting to Rosbridge: {ex.Message}");
+        }
+    }
+
+}

@@ -1,0 +1,20 @@
+﻿@page "/c"
+@rendermode InteractiveServer
+@using Microsoft.AspNetCore.Components.Web
+@using MudBlazor
+
+<MudThemeProvider />
+<MudDialogProvider />
+<MudSnackbarProvider />
+
+<MudPaper @onmousemove="HandleMouseMove" Class="paper-class" Elevation="4">
+    <MudText>Move mouse over this paper!</MudText>
+</MudPaper>
+
+@code {
+
+    private void HandleMouseMove(MouseEventArgs e)
+    {
+        Console.WriteLine($"Mouse move: {e.ClientX}, {e.ClientY}");
+    }
+}

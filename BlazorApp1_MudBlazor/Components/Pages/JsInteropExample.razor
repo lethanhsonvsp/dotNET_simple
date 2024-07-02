@@ -1,0 +1,33 @@
+﻿@page "/jsinterop"
+@inject IJSRuntime JS
+@rendermode InteractiveServer
+
+<h3>JavaScript Interop Example</h3>
+
+<button class="btn btn-primary" @onclick="CallJsFunction">Show Alert</button>
+<button class="btn btn-primary" @onclick="PromptUser">Prompt User</button>
+
+@if (showHello)
+{
+    <p></p>
+    <li>@Hello</li>
+}
+
+<p>@userName</p>
+
+@code {
+    private string? userName;
+    private bool showHello;
+    private string? Hello;
+
+    private async Task CallJsFunction()
+    {
+        Hello = await JS.InvokeAsync<string>("exampleJsFunctions.showAlert", "Hello from Blazor!");
+        showHello = true;
+    }
+
+    private async Task PromptUser()
+    {
+        userName = await JS.InvokeAsync<string>("exampleJsFunctions.promptUser", "Please enter your name:");
+    }
+}

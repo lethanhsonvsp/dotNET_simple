@@ -1,0 +1,141 @@
+﻿@page "/ros-subscriber"
+@inject IRosbridgeMessageDispatcher MessageDispatcher
+@rendermode InteractiveServer
+@using RosbridgeNet.RosbridgeClient.Common.Attributes
+@using RosbridgeNet.RosbridgeClient.ProtocolV2
+@using RosbridgeNet.RosbridgeClient.ProtocolV2.Generics
+@using RosbridgeNet.RosbridgeClient.ProtocolV2.Generics.Interfaces
+@using RosbridgeNet.RosbridgeClient.Common.Interfaces
+@using Microsoft.AspNetCore.Components.Web
+@using Newtonsoft.Json.Linq
+@using MudBlazor
+@using System.Net.WebSockets
+
+<MudThemeProvider />
+<MudDialogProvider />
+<MudSnackbarProvider />
+
+<MudButton Variant="Variant.Filled" Color="Color.Primary" Style="width: 50px; height: 50px; margin: 5px;" @onkeydown="HandleKeyPress" @onclick="test1"><b>a:A</b></MudButton>
+<MudButton Variant="Variant.Filled" Color="Color.Primary" Style="width: 50px; height: 50px; margin: 5px;" @onkeydown="HandleKeyPress" @onclick="test2"><b>s:B</b></MudButton>
+
+<h3>Blazor Rosbridge Subscriber</h3>
+
+<div>
+    <p>Received Subscriber Message: @message</p> <!-- Hiển thị thông báo đã nhận -->
+</div>
+
+@code {
+    private string? message; // Biến để lưu thông báo đã nhận
+    private ClientWebSocket rosSocket = new ClientWebSocket();
+
+    // Khởi tạo và đăng ký sự kiện
+    protected override async Task OnInitializedAsync()
+    {
+        Console.WriteLine("Component Initialized");
+        await ConnectRosbridge();
+    }
+
+    private async Task ConnectRosbridge()
+    {
+        try
+        {
+            Uri serverUri = new Uri("ws://192.168.137.218:9090");
+            await rosSocket.ConnectAsync(serverUri, CancellationToken.None);
+
+            // Subscribe to the topic "/char"
+            string subscribeRequest = "{\"op\":\"subscribe\",\"topic\":\"/char\"}";
+            byte[] subscribeRequestBytes = System.Text.Encoding.UTF8.GetBytes(subscribeRequest);
+            await rosSocket.SendAsync(new ArraySegment<byte>(subscribeRequestBytes), WebSocketMessageType.Text, true, CancellationToken.None);
+
+            // Start receiving messages
+            _ = ReceiveMessages();
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Error connecting to Rosbridge: {ex.Message}");
+        }
+    }
+
+    private async Task ReceiveMessages()
+    {
+        try
+        {
+            while (rosSocket.State == WebSocketState.Open)
+            {
+                var buffer = new byte[1024];
+                var result = await rosSocket.ReceiveAsync(new ArraySegment<byte>(buffer), CancellationToken.None);
+                if (result.Count > 0)
+                {
+                    string charData = System.Text.Encoding.UTF8.GetString(buffer, 0, result.Count);
+                    Console.WriteLine($"Received data: {charData}");
+                    // Received data: {"op": "publish", "topic": "/char", "msg": {"data": "Hello, ROS\\!"}}
+                    message = ExtractMessage(charData);
+                    await InvokeAsync(StateHasChanged);
+                }
+            }
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Error receiving data: {ex.Message}");
+        }
+    }
+
+    private string ExtractMessage(string jsonData)
+    {
+        try
+        {
+            var jObject = JObject.Parse(jsonData);
+            return jObject["msg"]?["data"]?.ToString() ?? string.Empty;
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Error extracting message: {ex.Message}");
+            return string.Empty;
+        }
+    }
+    private async Task PublishMessage(CharMessage message)
+    {
+        try
+        {
+            RosPublisher<CharMessage> publisher = new RosPublisher<CharMessage>(MessageDispatcher, "/char");
+            await publisher.AdvertiseAsync();
+            await publisher.PublishAsync(message);
+            Console.WriteLine($"Published message: {message.data}");
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine(ex.ToString());
+        }
+    }
+
+    private async Task HandleKeyPress(KeyboardEventArgs e)
+    {
+        switch (e.Key)
+        {
+            case "a":
+                await test1();
+                break;
+            case "s":
+                await test2();
+                break;
+        }
+    }
+
+    private async Task test1()
+    {
+        await PublishMessage(new CharMessage
+            {
+                data = "test PublishMessage 1"
+            });
+    }
+
+    private async Task test2()
+    {
+        await PublishMessage(new CharMessage
+            {
+                data = "test PublishMessage 2"
+            });
+    }
+
+
+}
