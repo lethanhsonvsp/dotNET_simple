@@ -48,3 +48,4 @@ C:\Users\letha\OneDrive\dotNET_simple\BlazorApp1_MudBlazor\obj\Debug\net8.0\scop
 C:\Users\letha\OneDrive\dotNET_simple\BlazorApp1_MudBlazor\bin\Debug\net8.0\Microsoft.Win32.SystemEvents.dll
 C:\Users\letha\OneDrive\dotNET_simple\BlazorApp1_MudBlazor\bin\Debug\net8.0\System.Drawing.Common.dll
 C:\Users\letha\OneDrive\dotNET_simple\BlazorApp1_MudBlazor\bin\Debug\net8.0\runtimes\win\lib\net8.0\Microsoft.Win32.SystemEvents.dll
+C:\Users\letha\OneDrive\dotNET_simple\BlazorApp1_MudBlazor\obj\Debug\net8.0\BlazorApp1_MudBlazor.sourcelink.json

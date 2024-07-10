@@ -1,0 +1,83 @@
+﻿@page "/"
+@inject IJSRuntime JSRuntime
+@rendermode InteractiveServer
+
+<MudThemeProvider />
+<MudDialogProvider />
+<MudSnackbarProvider />
+
+<MudContainer Style="width: 180px; height: 100px; padding: 16px; position: absolute; left: 250px;">
+    <MudGrid>
+        <MudItem xs="12">
+            <MudContainer Style="width: 100%; height: 100%; background-color: #b5b4b5; padding: 16px; border-radius: 16px;">
+                <h5 id="ros-status" style="color: red">Disconnected</h5>
+            </MudContainer>
+        </MudItem>
+    </MudGrid>
+</MudContainer>
+
+
+<MudContainer MaxWidth="MaxWidth.Large" Style="padding: 16px;">
+    <MudGrid>
+        <MudItem xs="12" md="3">
+            <MudContainer Style="width: 290px; height: 330px; background-color: #b5b4b5; padding: 16px; border-radius: 16px;">
+                <p>Nhấn các phím để điều khiển</p>
+                <div tabindex="0" style="border: 1px solid black; padding: 10px; width: 260px; height: 270px; overflow: auto;" @onkeydown="HandleKeyPress">
+                    <table style="width: 100%; height: 100%; border-collapse: collapse; text-align: center;">
+                        <tr>
+                            <td></td>
+                            <td>
+                                <MudButton Variant="Variant.Filled" Color="Color.Primary" Style="width: 50px; height: 50px; margin: 5px;" @onclick="MoveForward"><b>i</b></MudButton>
+                            </td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <MudButton Variant="Variant.Filled" Color="Color.Primary" Style="width: 50px; height: 50px; margin: 5px;" @onclick="MoveForwardLeft"><b>u</b></MudButton>
+                            </td>
+                            <td>
+                                <MudButton Variant="Variant.Filled" Color="Color.Primary" Style="width: 50px; height: 50px; margin: 5px;" @onclick="Stop"><b>k</b></MudButton>
+                            </td>
+                            <td>
+                                <MudButton Variant="Variant.Filled" Color="Color.Primary" Style="width: 50px; height: 50px; margin: 5px;" @onclick="MoveForwardRight"><b>o</b></MudButton>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <MudButton Variant="Variant.Filled" Color="Color.Primary" Style="width: 50px; height: 50px; margin: 5px;" @onclick="TurnCounterClockwise"><b>j</b></MudButton>
+                            </td>
+                            <td>
+                                <MudButton Variant="Variant.Filled" Color="Color.Primary" Style="width: 50px; height: 50px; margin: 5px;" @onclick="MoveBackward"><b>,</b></MudButton>
+                            </td>
+                            <td>
+                                <MudButton Variant="Variant.Filled" Color="Color.Primary" Style="width: 50px; height: 50px; margin: 5px;" @onclick="TurnClockwise"><b>l</b></MudButton>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>
+                                <MudButton Variant="Variant.Filled" Color="Color.Primary" Style="width: 50px; height: 50px; margin: 5px;" @onclick="MoveBackwardLeft"><b>m</b></MudButton>
+                            </td>
+                            <td></td>
+                        </tr>
+                    </table>
+                </div>
+            </MudContainer>
+        </MudItem>
+
+        <MudItem xs="12" md="3">
+            <MudContainer Style="width: 290px; height: 330px; background-color: #b5b4b5; padding: 16px; border-radius: 16px;">
+                <h5>Odom Data</h5>
+                <p>Position: <br />X: @positionXFormatted<br />Y: @positionYFormatted<br />Z: @positionZFormatted</p>
+                <p>Orientation: <br />X: @orientationXFormatted<br />Y: @orientationYFormatted<br />Z: @orientationZFormatted<br />W: @orientationWFormatted</p>
+            </MudContainer>
+        </MudItem>
+
+        <MudItem xs="12" md="3">
+            <MudContainer>
+                <div id="map" style="width: 640px; height: 480px; background-color: #b5b4b5; border-radius: 16px;"></div>
+            </MudContainer>
+        </MudItem>
+    </MudGrid>
+</MudContainer>
+

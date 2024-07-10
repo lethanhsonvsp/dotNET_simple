@@ -13,6 +13,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SimpleOpcUaClient", "Simple
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SimpleOpcUaServer", "SimpleOpcUaServer\SimpleOpcUaServer.csproj", "{DDA34E21-96A1-4C6E-81C5-A47377901D46}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlazorRosJs", "BlazorRosJs\BlazorRosJs.csproj", "{FFC8BC3D-966B-48B3-981B-B196C7A15EDD}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{DDA34E21-96A1-4C6E-81C5-A47377901D46}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DDA34E21-96A1-4C6E-81C5-A47377901D46}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DDA34E21-96A1-4C6E-81C5-A47377901D46}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FFC8BC3D-966B-48B3-981B-B196C7A15EDD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FFC8BC3D-966B-48B3-981B-B196C7A15EDD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FFC8BC3D-966B-48B3-981B-B196C7A15EDD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FFC8BC3D-966B-48B3-981B-B196C7A15EDD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

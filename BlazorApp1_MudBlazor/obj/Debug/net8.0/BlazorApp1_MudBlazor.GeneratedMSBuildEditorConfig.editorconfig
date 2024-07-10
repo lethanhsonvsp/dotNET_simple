@@ -50,8 +50,12 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xKc0ludGVyb3BFeGFtcGxlLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/letha/OneDrive/dotNET_simple/BlazorApp1_MudBlazor/Components/Pages/MapSubscriber.razor]
-build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xNYXBTdWJzY3JpYmVyLnJhem9y
+[C:/Users/letha/OneDrive/dotNET_simple/BlazorApp1_MudBlazor/Components/Pages/Map.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xNYXAucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/letha/OneDrive/dotNET_simple/BlazorApp1_MudBlazor/Components/Pages/Odom.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xPZG9tLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/letha/OneDrive/dotNET_simple/BlazorApp1_MudBlazor/Components/Pages/RosSubscriber.razor]

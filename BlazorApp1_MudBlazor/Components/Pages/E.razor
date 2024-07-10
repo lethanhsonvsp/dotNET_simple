@@ -44,42 +44,6 @@
     private double orientationZ = 0.0;
     private double orientationW = 0.0;
 
-    protected override async Task OnInitializedAsync()
-    {
-        await base.OnInitializedAsync();
-        await SubscribeToTopic();
-    }
-
-    private async Task SubscribeToTopic()
-    {
-        try
-        {
-            var subscriber = new RosSubscriber<PoseWithCovarianceStamped>(MessageDispatcher, "/amcl_pose");
-            subscriber.RosMessageReceived += (s, e) =>
-            {
-                InvokeAsync(() =>
-                {
-                    message = e.RosMessage.ToString();
-                    if (e.RosMessage.pose != null)
-                    {
-                        positionX = e.RosMessage.pose.pose.position.x;
-                        positionY = e.RosMessage.pose.pose.position.y;
-                        positionZ = e.RosMessage.pose.pose.position.z;
-                        orientationX = e.RosMessage.pose.pose.orientation.x;
-                        orientationY = e.RosMessage.pose.pose.orientation.y;
-                        orientationZ = e.RosMessage.pose.pose.orientation.z;
-                        orientationW = e.RosMessage.pose.pose.orientation.w;
-                    }
-                    StateHasChanged();
-                });
-            };
-            await subscriber.SubscribeAsync();
-        }
-        catch (Exception ex)
-        {
-            Console.WriteLine("Error subscribing to topic: " + ex.ToString());
-        }
-    }
 
     private async Task PublishMessage(Twist twist)
     {

@@ -1,0 +1,52 @@
+﻿@page "/odom"
+@using Microsoft.JSInterop
+@inject IJSRuntime JSRuntime
+@rendermode InteractiveServer
+
+<MudThemeProvider />
+<MudDialogProvider />
+<MudSnackbarProvider />
+
+<MudContainer>
+    <MudText Typo="Typo.h5">Odom Data</MudText>
+    <MudText>Position:</MudText>
+    <MudText>X: @odomPositionX</MudText>
+    <MudText>Y: @odomPositionY</MudText>
+    <MudText>Z: @odomPositionZ</MudText>
+    <MudText>Orientation:</MudText>
+    <MudText>X: @odomOrientationX</MudText>
+    <MudText>Y: @odomOrientationY</MudText>
+    <MudText>Z: @odomOrientationZ</MudText>
+    <MudText>W: @odomOrientationW</MudText>
+</MudContainer>
+@inject IJSRuntime JS
+
+<MudButton OnClick="ConnectToRos">Connect to ROS</MudButton>
+
+@code {
+    private async Task ConnectToRos()
+    {
+        await JS.InvokeVoidAsync("initializeRosConnection", "ws://192.168.137.218:9090");
+    }
+    private double odomPositionX;
+    private double odomPositionY;
+    private double odomPositionZ;
+    private double odomOrientationX;
+    private double odomOrientationY;
+    private double odomOrientationZ;
+    private double odomOrientationW;
+
+    [JSInvokable]
+    public void UpdateOdomData(dynamic message)
+    {
+        odomPositionX = message.pose.pose.position.x;
+        odomPositionY = message.pose.pose.position.y;
+        odomPositionZ = message.pose.pose.position.z;
+        odomOrientationX = message.pose.pose.orientation.x;
+        odomOrientationY = message.pose.pose.orientation.y;
+        odomOrientationZ = message.pose.pose.orientation.z;
+        odomOrientationW = message.pose.pose.orientation.w;
+        StateHasChanged();
+    }
+}
+

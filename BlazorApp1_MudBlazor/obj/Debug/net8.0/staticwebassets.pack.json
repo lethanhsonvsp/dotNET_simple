@@ -29,6 +29,642 @@
       "PackagePath": "staticwebassets\\js\\interop.js"
     },
     {
+      "Id": "C:\\Users\\letha\\OneDrive\\dotNET_simple\\BlazorApp1_MudBlazor\\wwwroot\\js\\site.js",
+      "PackagePath": "staticwebassets\\js\\site.js"
+    },
+    {
+      "Id": "C:\\Users\\letha\\OneDrive\\dotNET_simple\\BlazorApp1_MudBlazor\\wwwroot\\nav2djs\\.gitignore",
+      "PackagePath": "staticwebassets\\nav2djs\\.gitignore"
+    },
+    {
+      "Id": "C:\\Users\\letha\\OneDrive\\dotNET_simple\\BlazorApp1_MudBlazor\\wwwroot\\nav2djs\\.travis.yml",
+      "PackagePath": "staticwebassets\\nav2djs\\.travis.yml"
+    },
+    {
+      "Id": "C:\\Users\\letha\\OneDrive\\dotNET_simple\\BlazorApp1_MudBlazor\\wwwroot\\nav2djs\\AUTHORS.md",
+      "PackagePath": "staticwebassets\\nav2djs\\AUTHORS.md"
+    },
+    {
+      "Id": "C:\\Users\\letha\\OneDrive\\dotNET_simple\\BlazorApp1_MudBlazor\\wwwroot\\nav2djs\\CHANGELOG.md",
+      "PackagePath": "staticwebassets\\nav2djs\\CHANGELOG.md"
+    },
+    {
+      "Id": "C:\\Users\\letha\\OneDrive\\dotNET_simple\\BlazorApp1_MudBlazor\\wwwroot\\nav2djs\\LICENSE",
+      "PackagePath": "staticwebassets\\nav2djs"
+    },
+    {
+      "Id": "C:\\Users\\letha\\OneDrive\\dotNET_simple\\BlazorApp1_MudBlazor\\wwwroot\\nav2djs\\README.md",
+      "PackagePath": "staticwebassets\\nav2djs\\README.md"
+    },
+    {
+      "Id": "C:\\Users\\letha\\OneDrive\\dotNET_simple\\BlazorApp1_MudBlazor\\wwwroot\\nav2djs\\examples\\image.html",
+      "PackagePath": "staticwebassets\\nav2djs\\examples\\image.html"
+    },
+    {
+      "Id": "C:\\Users\\letha\\OneDrive\\dotNET_simple\\BlazorApp1_MudBlazor\\wwwroot\\nav2djs\\examples\\map.png",
+      "PackagePath": "staticwebassets\\nav2djs\\examples\\map.png"
+    },
+    {
+      "Id": "C:\\Users\\letha\\OneDrive\\dotNET_simple\\BlazorApp1_MudBlazor\\wwwroot\\nav2djs\\examples\\occupancygrid.html",
+      "PackagePath": "staticwebassets\\nav2djs\\examples\\occupancygrid.html"
+    },
+    {
+      "Id": "C:\\Users\\letha\\OneDrive\\dotNET_simple\\BlazorApp1_MudBlazor\\wwwroot\\nav2djs\\examples\\occupancygridimage.html",
+      "PackagePath": "staticwebassets\\nav2djs\\examples\\occupancygridimage.html"
+    },
+    {
+      "Id": "C:\\Users\\letha\\OneDrive\\dotNET_simple\\BlazorApp1_MudBlazor\\wwwroot\\nav2djs\\examples\\turtlebot.png",
+      "PackagePath": "staticwebassets\\nav2djs\\examples\\turtlebot.png"
+    },
+    {
+      "Id": "C:\\Users\\letha\\OneDrive\\dotNET_simple\\BlazorApp1_MudBlazor\\wwwroot\\nav2djs\\src\\Nav2D.js",
+      "PackagePath": "staticwebassets\\nav2djs\\src\\Nav2D.js"
+    },
+    {
+      "Id": "C:\\Users\\letha\\OneDrive\\dotNET_simple\\BlazorApp1_MudBlazor\\wwwroot\\nav2djs\\src\\navigator\\ImageMapClientNav.js",
+      "PackagePath": "staticwebassets\\nav2djs\\src\\navigator\\ImageMapClientNav.js"
+    },
+    {
+      "Id": "C:\\Users\\letha\\OneDrive\\dotNET_simple\\BlazorApp1_MudBlazor\\wwwroot\\nav2djs\\src\\navigator\\Navigator.js",
+      "PackagePath": "staticwebassets\\nav2djs\\src\\navigator\\Navigator.js"
+    },
+    {
+      "Id": "C:\\Users\\letha\\OneDrive\\dotNET_simple\\BlazorApp1_MudBlazor\\wwwroot\\nav2djs\\src\\navigator\\OccupancyGridClientNav.js",
+      "PackagePath": "staticwebassets\\nav2djs\\src\\navigator\\OccupancyGridClientNav.js"
+    },
+    {
+      "Id": "C:\\Users\\letha\\OneDrive\\dotNET_simple\\BlazorApp1_MudBlazor\\wwwroot\\nav2djs\\utils\\.jshintrc",
+      "PackagePath": "staticwebassets\\nav2djs\\utils\\.jshintrc"
+    },
+    {
+      "Id": "C:\\Users\\letha\\OneDrive\\dotNET_simple\\BlazorApp1_MudBlazor\\wwwroot\\nav2djs\\utils\\Gruntfile.js",
+      "PackagePath": "staticwebassets\\nav2djs\\utils\\Gruntfile.js"
+    },
+    {
+      "Id": "C:\\Users\\letha\\OneDrive\\dotNET_simple\\BlazorApp1_MudBlazor\\wwwroot\\nav2djs\\utils\\README.md",
+      "PackagePath": "staticwebassets\\nav2djs\\utils\\README.md"
+    },
+    {
+      "Id": "C:\\Users\\letha\\OneDrive\\dotNET_simple\\BlazorApp1_MudBlazor\\wwwroot\\nav2djs\\utils\\package-lock.json",
+      "PackagePath": "staticwebassets\\nav2djs\\utils\\package-lock.json"
+    },
+    {
+      "Id": "C:\\Users\\letha\\OneDrive\\dotNET_simple\\BlazorApp1_MudBlazor\\wwwroot\\nav2djs\\utils\\package.json",
+      "PackagePath": "staticwebassets\\nav2djs\\utils\\package.json"
+    },
+    {
+      "Id": "C:\\Users\\letha\\OneDrive\\dotNET_simple\\BlazorApp1_MudBlazor\\wwwroot\\ros2djs\\.eslintrc",
+      "PackagePath": "staticwebassets\\ros2djs\\.eslintrc"
+    },
+    {
+      "Id": "C:\\Users\\letha\\OneDrive\\dotNET_simple\\BlazorApp1_MudBlazor\\wwwroot\\ros2djs\\.gitignore",
+      "PackagePath": "staticwebassets\\ros2djs\\.gitignore"
+    },
+    {
+      "Id": "C:\\Users\\letha\\OneDrive\\dotNET_simple\\BlazorApp1_MudBlazor\\wwwroot\\ros2djs\\.jshintrc",
+      "PackagePath": "staticwebassets\\ros2djs\\.jshintrc"
+    },
+    {
+      "Id": "C:\\Users\\letha\\OneDrive\\dotNET_simple\\BlazorApp1_MudBlazor\\wwwroot\\ros2djs\\AUTHORS.md",
+      "PackagePath": "staticwebassets\\ros2djs\\AUTHORS.md"
+    },
+    {
+      "Id": "C:\\Users\\letha\\OneDrive\\dotNET_simple\\BlazorApp1_MudBlazor\\wwwroot\\ros2djs\\CHANGELOG.md",
+      "PackagePath": "staticwebassets\\ros2djs\\CHANGELOG.md"
+    },
+    {
+      "Id": "C:\\Users\\letha\\OneDrive\\dotNET_simple\\BlazorApp1_MudBlazor\\wwwroot\\ros2djs\\CONTRIBUTING.md",
+      "PackagePath": "staticwebassets\\ros2djs\\CONTRIBUTING.md"
+    },
+    {
+      "Id": "C:\\Users\\letha\\OneDrive\\dotNET_simple\\BlazorApp1_MudBlazor\\wwwroot\\ros2djs\\Gruntfile.js",
+      "PackagePath": "staticwebassets\\ros2djs\\Gruntfile.js"
+    },
+    {
+      "Id": "C:\\Users\\letha\\OneDrive\\dotNET_simple\\BlazorApp1_MudBlazor\\wwwroot\\ros2djs\\LICENSE",
+      "PackagePath": "staticwebassets\\ros2djs"
+    },
+    {
+      "Id": "C:\\Users\\letha\\OneDrive\\dotNET_simple\\BlazorApp1_MudBlazor\\wwwroot\\ros2djs\\README.md",
+      "PackagePath": "staticwebassets\\ros2djs\\README.md"
+    },
+    {
+      "Id": "C:\\Users\\letha\\OneDrive\\dotNET_simple\\BlazorApp1_MudBlazor\\wwwroot\\ros2djs\\build\\ros2d.cjs.js",
+      "PackagePath": "staticwebassets\\ros2djs\\build\\ros2d.cjs.js"
+    },
+    {
+      "Id": "C:\\Users\\letha\\OneDrive\\dotNET_simple\\BlazorApp1_MudBlazor\\wwwroot\\ros2djs\\build\\ros2d.esm.js",
+      "PackagePath": "staticwebassets\\ros2djs\\build\\ros2d.esm.js"
+    },
+    {
+      "Id": "C:\\Users\\letha\\OneDrive\\dotNET_simple\\BlazorApp1_MudBlazor\\wwwroot\\ros2djs\\build\\ros2d.js",
+      "PackagePath": "staticwebassets\\ros2djs\\build\\ros2d.js"
+    },
+    {
+      "Id": "C:\\Users\\letha\\OneDrive\\dotNET_simple\\BlazorApp1_MudBlazor\\wwwroot\\ros2djs\\build\\ros2d.min.js",
+      "PackagePath": "staticwebassets\\ros2djs\\build\\ros2d.min.js"
+    },
+    {
+      "Id": "C:\\Users\\letha\\OneDrive\\dotNET_simple\\BlazorApp1_MudBlazor\\wwwroot\\ros2djs\\es6-support\\index.js",
+      "PackagePath": "staticwebassets\\ros2djs\\es6-support\\index.js"
+    },
+    {
+      "Id": "C:\\Users\\letha\\OneDrive\\dotNET_simple\\BlazorApp1_MudBlazor\\wwwroot\\ros2djs\\es6-transpiler.js",
+      "PackagePath": "staticwebassets\\ros2djs\\es6-transpiler.js"
+    },
+    {
+      "Id": "C:\\Users\\letha\\OneDrive\\dotNET_simple\\BlazorApp1_MudBlazor\\wwwroot\\ros2djs\\examples\\continuous.html",
+      "PackagePath": "staticwebassets\\ros2djs\\examples\\continuous.html"
+    },
+    {
+      "Id": "C:\\Users\\letha\\OneDrive\\dotNET_simple\\BlazorApp1_MudBlazor\\wwwroot\\ros2djs\\examples\\draw.html",
+      "PackagePath": "staticwebassets\\ros2djs\\examples\\draw.html"
+    },
+    {
+      "Id": "C:\\Users\\letha\\OneDrive\\dotNET_simple\\BlazorApp1_MudBlazor\\wwwroot\\ros2djs\\examples\\image.html",
+      "PackagePath": "staticwebassets\\ros2djs\\examples\\image.html"
+    },
+    {
+      "Id": "C:\\Users\\letha\\OneDrive\\dotNET_simple\\BlazorApp1_MudBlazor\\wwwroot\\ros2djs\\examples\\map.html",
+      "PackagePath": "staticwebassets\\ros2djs\\examples\\map.html"
+    },
+    {
+      "Id": "C:\\Users\\letha\\OneDrive\\dotNET_simple\\BlazorApp1_MudBlazor\\wwwroot\\ros2djs\\examples\\map.png",
+      "PackagePath": "staticwebassets\\ros2djs\\examples\\map.png"
+    },
+    {
+      "Id": "C:\\Users\\letha\\OneDrive\\dotNET_simple\\BlazorApp1_MudBlazor\\wwwroot\\ros2djs\\jsdoc_conf.json",
+      "PackagePath": "staticwebassets\\ros2djs\\jsdoc_conf.json"
+    },
+    {
+      "Id": "C:\\Users\\letha\\OneDrive\\dotNET_simple\\BlazorApp1_MudBlazor\\wwwroot\\ros2djs\\package-lock.json",
+      "PackagePath": "staticwebassets\\ros2djs\\package-lock.json"
+    },
+    {
+      "Id": "C:\\Users\\letha\\OneDrive\\dotNET_simple\\BlazorApp1_MudBlazor\\wwwroot\\ros2djs\\package.json",
+      "PackagePath": "staticwebassets\\ros2djs\\package.json"
+    },
+    {
+      "Id": "C:\\Users\\letha\\OneDrive\\dotNET_simple\\BlazorApp1_MudBlazor\\wwwroot\\ros2djs\\rollup.config.js",
+      "PackagePath": "staticwebassets\\ros2djs\\rollup.config.js"
+    },
+    {
+      "Id": "C:\\Users\\letha\\OneDrive\\dotNET_simple\\BlazorApp1_MudBlazor\\wwwroot\\ros2djs\\src\\Ros2D.js",
+      "PackagePath": "staticwebassets\\ros2djs\\src\\Ros2D.js"
+    },
+    {
+      "Id": "C:\\Users\\letha\\OneDrive\\dotNET_simple\\BlazorApp1_MudBlazor\\wwwroot\\ros2djs\\src\\maps\\ImageMap.js",
+      "PackagePath": "staticwebassets\\ros2djs\\src\\maps\\ImageMap.js"
+    },
+    {
+      "Id": "C:\\Users\\letha\\OneDrive\\dotNET_simple\\BlazorApp1_MudBlazor\\wwwroot\\ros2djs\\src\\maps\\ImageMapClient.js",
+      "PackagePath": "staticwebassets\\ros2djs\\src\\maps\\ImageMapClient.js"
+    },
+    {
+      "Id": "C:\\Users\\letha\\OneDrive\\dotNET_simple\\BlazorApp1_MudBlazor\\wwwroot\\ros2djs\\src\\maps\\OccupancyGrid.js",
+      "PackagePath": "staticwebassets\\ros2djs\\src\\maps\\OccupancyGrid.js"
+    },
+    {
+      "Id": "C:\\Users\\letha\\OneDrive\\dotNET_simple\\BlazorApp1_MudBlazor\\wwwroot\\ros2djs\\src\\maps\\OccupancyGridClient.js",
+      "PackagePath": "staticwebassets\\ros2djs\\src\\maps\\OccupancyGridClient.js"
+    },
+    {
+      "Id": "C:\\Users\\letha\\OneDrive\\dotNET_simple\\BlazorApp1_MudBlazor\\wwwroot\\ros2djs\\src\\maps\\OccupancyGridSrvClient.js",
+      "PackagePath": "staticwebassets\\ros2djs\\src\\maps\\OccupancyGridSrvClient.js"
+    },
+    {
+      "Id": "C:\\Users\\letha\\OneDrive\\dotNET_simple\\BlazorApp1_MudBlazor\\wwwroot\\ros2djs\\src\\models\\ArrowShape.js",
+      "PackagePath": "staticwebassets\\ros2djs\\src\\models\\ArrowShape.js"
+    },
+    {
+      "Id": "C:\\Users\\letha\\OneDrive\\dotNET_simple\\BlazorApp1_MudBlazor\\wwwroot\\ros2djs\\src\\models\\Grid.js",
+      "PackagePath": "staticwebassets\\ros2djs\\src\\models\\Grid.js"
+    },
+    {
+      "Id": "C:\\Users\\letha\\OneDrive\\dotNET_simple\\BlazorApp1_MudBlazor\\wwwroot\\ros2djs\\src\\models\\NavigationArrow.js",
+      "PackagePath": "staticwebassets\\ros2djs\\src\\models\\NavigationArrow.js"
+    },
+    {
+      "Id": "C:\\Users\\letha\\OneDrive\\dotNET_simple\\BlazorApp1_MudBlazor\\wwwroot\\ros2djs\\src\\models\\NavigationImage.js",
+      "PackagePath": "staticwebassets\\ros2djs\\src\\models\\NavigationImage.js"
+    },
+    {
+      "Id": "C:\\Users\\letha\\OneDrive\\dotNET_simple\\BlazorApp1_MudBlazor\\wwwroot\\ros2djs\\src\\models\\PathShape.js",
+      "PackagePath": "staticwebassets\\ros2djs\\src\\models\\PathShape.js"
+    },
+    {
+      "Id": "C:\\Users\\letha\\OneDrive\\dotNET_simple\\BlazorApp1_MudBlazor\\wwwroot\\ros2djs\\src\\models\\PolygonMarker.js",
+      "PackagePath": "staticwebassets\\ros2djs\\src\\models\\PolygonMarker.js"
+    },
+    {
+      "Id": "C:\\Users\\letha\\OneDrive\\dotNET_simple\\BlazorApp1_MudBlazor\\wwwroot\\ros2djs\\src\\models\\TraceShape.js",
+      "PackagePath": "staticwebassets\\ros2djs\\src\\models\\TraceShape.js"
+    },
+    {
+      "Id": "C:\\Users\\letha\\OneDrive\\dotNET_simple\\BlazorApp1_MudBlazor\\wwwroot\\ros2djs\\src\\visualization\\PanView.js",
+      "PackagePath": "staticwebassets\\ros2djs\\src\\visualization\\PanView.js"
+    },
+    {
+      "Id": "C:\\Users\\letha\\OneDrive\\dotNET_simple\\BlazorApp1_MudBlazor\\wwwroot\\ros2djs\\src\\visualization\\Viewer.js",
+      "PackagePath": "staticwebassets\\ros2djs\\src\\visualization\\Viewer.js"
+    },
+    {
+      "Id": "C:\\Users\\letha\\OneDrive\\dotNET_simple\\BlazorApp1_MudBlazor\\wwwroot\\ros2djs\\src\\visualization\\ZoomView.js",
+      "PackagePath": "staticwebassets\\ros2djs\\src\\visualization\\ZoomView.js"
+    },
+    {
+      "Id": "C:\\Users\\letha\\OneDrive\\dotNET_simple\\BlazorApp1_MudBlazor\\wwwroot\\roslibjs\\.gitignore",
+      "PackagePath": "staticwebassets\\roslibjs\\.gitignore"
+    },
+    {
+      "Id": "C:\\Users\\letha\\OneDrive\\dotNET_simple\\BlazorApp1_MudBlazor\\wwwroot\\roslibjs\\.npmignore",
+      "PackagePath": "staticwebassets\\roslibjs\\.npmignore"
+    },
+    {
+      "Id": "C:\\Users\\letha\\OneDrive\\dotNET_simple\\BlazorApp1_MudBlazor\\wwwroot\\roslibjs\\.npmrc",
+      "PackagePath": "staticwebassets\\roslibjs\\.npmrc"
+    },
+    {
+      "Id": "C:\\Users\\letha\\OneDrive\\dotNET_simple\\BlazorApp1_MudBlazor\\wwwroot\\roslibjs\\AUTHORS.md",
+      "PackagePath": "staticwebassets\\roslibjs\\AUTHORS.md"
+    },
+    {
+      "Id": "C:\\Users\\letha\\OneDrive\\dotNET_simple\\BlazorApp1_MudBlazor\\wwwroot\\roslibjs\\CHANGELOG.md",
+      "PackagePath": "staticwebassets\\roslibjs\\CHANGELOG.md"
+    },
+    {
+      "Id": "C:\\Users\\letha\\OneDrive\\dotNET_simple\\BlazorApp1_MudBlazor\\wwwroot\\roslibjs\\CONTRIBUTING.md",
+      "PackagePath": "staticwebassets\\roslibjs\\CONTRIBUTING.md"
+    },
+    {
+      "Id": "C:\\Users\\letha\\OneDrive\\dotNET_simple\\BlazorApp1_MudBlazor\\wwwroot\\roslibjs\\LICENSE",
+      "PackagePath": "staticwebassets\\roslibjs"
+    },
+    {
+      "Id": "C:\\Users\\letha\\OneDrive\\dotNET_simple\\BlazorApp1_MudBlazor\\wwwroot\\roslibjs\\README.md",
+      "PackagePath": "staticwebassets\\roslibjs\\README.md"
+    },
+    {
+      "Id": "C:\\Users\\letha\\OneDrive\\dotNET_simple\\BlazorApp1_MudBlazor\\wwwroot\\roslibjs\\RELEASE.md",
+      "PackagePath": "staticwebassets\\roslibjs\\RELEASE.md"
+    },
+    {
+      "Id": "C:\\Users\\letha\\OneDrive\\dotNET_simple\\BlazorApp1_MudBlazor\\wwwroot\\roslibjs\\eslint.config.js",
+      "PackagePath": "staticwebassets\\roslibjs\\eslint.config.js"
+    },
+    {
+      "Id": "C:\\Users\\letha\\OneDrive\\dotNET_simple\\BlazorApp1_MudBlazor\\wwwroot\\roslibjs\\examples\\action_client.html",
+      "PackagePath": "staticwebassets\\roslibjs\\examples\\action_client.html"
+    },
+    {
+      "Id": "C:\\Users\\letha\\OneDrive\\dotNET_simple\\BlazorApp1_MudBlazor\\wwwroot\\roslibjs\\examples\\action_server.html",
+      "PackagePath": "staticwebassets\\roslibjs\\examples\\action_server.html"
+    },
+    {
+      "Id": "C:\\Users\\letha\\OneDrive\\dotNET_simple\\BlazorApp1_MudBlazor\\wwwroot\\roslibjs\\examples\\math.html",
+      "PackagePath": "staticwebassets\\roslibjs\\examples\\math.html"
+    },
+    {
+      "Id": "C:\\Users\\letha\\OneDrive\\dotNET_simple\\BlazorApp1_MudBlazor\\wwwroot\\roslibjs\\examples\\node_simple.js",
+      "PackagePath": "staticwebassets\\roslibjs\\examples\\node_simple.js"
+    },
+    {
+      "Id": "C:\\Users\\letha\\OneDrive\\dotNET_simple\\BlazorApp1_MudBlazor\\wwwroot\\roslibjs\\examples\\react-example\\.gitignore",
+      "PackagePath": "staticwebassets\\roslibjs\\examples\\react-example\\.gitignore"
+    },
+    {
+      "Id": "C:\\Users\\letha\\OneDrive\\dotNET_simple\\BlazorApp1_MudBlazor\\wwwroot\\roslibjs\\examples\\react-example\\README.md",
+      "PackagePath": "staticwebassets\\roslibjs\\examples\\react-example\\README.md"
+    },
+    {
+      "Id": "C:\\Users\\letha\\OneDrive\\dotNET_simple\\BlazorApp1_MudBlazor\\wwwroot\\roslibjs\\examples\\react-example\\package-lock.json",
+      "PackagePath": "staticwebassets\\roslibjs\\examples\\react-example\\package-lock.json"
+    },
+    {
+      "Id": "C:\\Users\\letha\\OneDrive\\dotNET_simple\\BlazorApp1_MudBlazor\\wwwroot\\roslibjs\\examples\\react-example\\package.json",
+      "PackagePath": "staticwebassets\\roslibjs\\examples\\react-example\\package.json"
+    },
+    {
+      "Id": "C:\\Users\\letha\\OneDrive\\dotNET_simple\\BlazorApp1_MudBlazor\\wwwroot\\roslibjs\\examples\\react-example\\public\\favicon.ico",
+      "PackagePath": "staticwebassets\\roslibjs\\examples\\react-example\\public\\favicon.ico"
+    },
+    {
+      "Id": "C:\\Users\\letha\\OneDrive\\dotNET_simple\\BlazorApp1_MudBlazor\\wwwroot\\roslibjs\\examples\\react-example\\public\\index.html",
+      "PackagePath": "staticwebassets\\roslibjs\\examples\\react-example\\public\\index.html"
+    },
+    {
+      "Id": "C:\\Users\\letha\\OneDrive\\dotNET_simple\\BlazorApp1_MudBlazor\\wwwroot\\roslibjs\\examples\\react-example\\public\\logo192.png",
+      "PackagePath": "staticwebassets\\roslibjs\\examples\\react-example\\public\\logo192.png"
+    },
+    {
+      "Id": "C:\\Users\\letha\\OneDrive\\dotNET_simple\\BlazorApp1_MudBlazor\\wwwroot\\roslibjs\\examples\\react-example\\public\\logo512.png",
+      "PackagePath": "staticwebassets\\roslibjs\\examples\\react-example\\public\\logo512.png"
+    },
+    {
+      "Id": "C:\\Users\\letha\\OneDrive\\dotNET_simple\\BlazorApp1_MudBlazor\\wwwroot\\roslibjs\\examples\\react-example\\public\\manifest.json",
+      "PackagePath": "staticwebassets\\roslibjs\\examples\\react-example\\public\\manifest.json"
+    },
+    {
+      "Id": "C:\\Users\\letha\\OneDrive\\dotNET_simple\\BlazorApp1_MudBlazor\\wwwroot\\roslibjs\\examples\\react-example\\public\\robots.txt",
+      "PackagePath": "staticwebassets\\roslibjs\\examples\\react-example\\public\\robots.txt"
+    },
+    {
+      "Id": "C:\\Users\\letha\\OneDrive\\dotNET_simple\\BlazorApp1_MudBlazor\\wwwroot\\roslibjs\\examples\\react-example\\src\\App.css",
+      "PackagePath": "staticwebassets\\roslibjs\\examples\\react-example\\src\\App.css"
+    },
+    {
+      "Id": "C:\\Users\\letha\\OneDrive\\dotNET_simple\\BlazorApp1_MudBlazor\\wwwroot\\roslibjs\\examples\\react-example\\src\\App.jsx",
+      "PackagePath": "staticwebassets\\roslibjs\\examples\\react-example\\src\\App.jsx"
+    },
+    {
+      "Id": "C:\\Users\\letha\\OneDrive\\dotNET_simple\\BlazorApp1_MudBlazor\\wwwroot\\roslibjs\\examples\\react-example\\src\\App.test.jsx",
+      "PackagePath": "staticwebassets\\roslibjs\\examples\\react-example\\src\\App.test.jsx"
+    },
+    {
+      "Id": "C:\\Users\\letha\\OneDrive\\dotNET_simple\\BlazorApp1_MudBlazor\\wwwroot\\roslibjs\\examples\\react-example\\src\\component_examples\\example_functions.jsx",
+      "PackagePath": "staticwebassets\\roslibjs\\examples\\react-example\\src\\component_examples\\example_functions.jsx"
+    },
+    {
+      "Id": "C:\\Users\\letha\\OneDrive\\dotNET_simple\\BlazorApp1_MudBlazor\\wwwroot\\roslibjs\\examples\\react-example\\src\\index.css",
+      "PackagePath": "staticwebassets\\roslibjs\\examples\\react-example\\src\\index.css"
+    },
+    {
+      "Id": "C:\\Users\\letha\\OneDrive\\dotNET_simple\\BlazorApp1_MudBlazor\\wwwroot\\roslibjs\\examples\\react-example\\src\\index.jsx",
+      "PackagePath": "staticwebassets\\roslibjs\\examples\\react-example\\src\\index.jsx"
+    },
+    {
+      "Id": "C:\\Users\\letha\\OneDrive\\dotNET_simple\\BlazorApp1_MudBlazor\\wwwroot\\roslibjs\\examples\\react-example\\src\\logo.svg",
+      "PackagePath": "staticwebassets\\roslibjs\\examples\\react-example\\src\\logo.svg"
+    },
+    {
+      "Id": "C:\\Users\\letha\\OneDrive\\dotNET_simple\\BlazorApp1_MudBlazor\\wwwroot\\roslibjs\\examples\\react-example\\src\\setupTests.js",
+      "PackagePath": "staticwebassets\\roslibjs\\examples\\react-example\\src\\setupTests.js"
+    },
+    {
+      "Id": "C:\\Users\\letha\\OneDrive\\dotNET_simple\\BlazorApp1_MudBlazor\\wwwroot\\roslibjs\\examples\\ros2_action_client.html",
+      "PackagePath": "staticwebassets\\roslibjs\\examples\\ros2_action_client.html"
+    },
+    {
+      "Id": "C:\\Users\\letha\\OneDrive\\dotNET_simple\\BlazorApp1_MudBlazor\\wwwroot\\roslibjs\\examples\\ros2_action_server.html",
+      "PackagePath": "staticwebassets\\roslibjs\\examples\\ros2_action_server.html"
+    },
+    {
+      "Id": "C:\\Users\\letha\\OneDrive\\dotNET_simple\\BlazorApp1_MudBlazor\\wwwroot\\roslibjs\\examples\\ros2_simple.html",
+      "PackagePath": "staticwebassets\\roslibjs\\examples\\ros2_simple.html"
+    },
+    {
+      "Id": "C:\\Users\\letha\\OneDrive\\dotNET_simple\\BlazorApp1_MudBlazor\\wwwroot\\roslibjs\\examples\\simple.html",
+      "PackagePath": "staticwebassets\\roslibjs\\examples\\simple.html"
+    },
+    {
+      "Id": "C:\\Users\\letha\\OneDrive\\dotNET_simple\\BlazorApp1_MudBlazor\\wwwroot\\roslibjs\\examples\\tf.html",
+      "PackagePath": "staticwebassets\\roslibjs\\examples\\tf.html"
+    },
+    {
+      "Id": "C:\\Users\\letha\\OneDrive\\dotNET_simple\\BlazorApp1_MudBlazor\\wwwroot\\roslibjs\\examples\\urdf.html",
+      "PackagePath": "staticwebassets\\roslibjs\\examples\\urdf.html"
+    },
+    {
+      "Id": "C:\\Users\\letha\\OneDrive\\dotNET_simple\\BlazorApp1_MudBlazor\\wwwroot\\roslibjs\\jsdoc_conf.json",
+      "PackagePath": "staticwebassets\\roslibjs\\jsdoc_conf.json"
+    },
+    {
+      "Id": "C:\\Users\\letha\\OneDrive\\dotNET_simple\\BlazorApp1_MudBlazor\\wwwroot\\roslibjs\\package-lock.json",
+      "PackagePath": "staticwebassets\\roslibjs\\package-lock.json"
+    },
+    {
+      "Id": "C:\\Users\\letha\\OneDrive\\dotNET_simple\\BlazorApp1_MudBlazor\\wwwroot\\roslibjs\\package.json",
+      "PackagePath": "staticwebassets\\roslibjs\\package.json"
+    },
+    {
+      "Id": "C:\\Users\\letha\\OneDrive\\dotNET_simple\\BlazorApp1_MudBlazor\\wwwroot\\roslibjs\\src\\RosLib.js",
+      "PackagePath": "staticwebassets\\roslibjs\\src\\RosLib.js"
+    },
+    {
+      "Id": "C:\\Users\\letha\\OneDrive\\dotNET_simple\\BlazorApp1_MudBlazor\\wwwroot\\roslibjs\\src\\actionlib\\ActionClient.js",
+      "PackagePath": "staticwebassets\\roslibjs\\src\\actionlib\\ActionClient.js"
+    },
+    {
+      "Id": "C:\\Users\\letha\\OneDrive\\dotNET_simple\\BlazorApp1_MudBlazor\\wwwroot\\roslibjs\\src\\actionlib\\ActionListener.js",
+      "PackagePath": "staticwebassets\\roslibjs\\src\\actionlib\\ActionListener.js"
+    },
+    {
+      "Id": "C:\\Users\\letha\\OneDrive\\dotNET_simple\\BlazorApp1_MudBlazor\\wwwroot\\roslibjs\\src\\actionlib\\Goal.js",
+      "PackagePath": "staticwebassets\\roslibjs\\src\\actionlib\\Goal.js"
+    },
+    {
+      "Id": "C:\\Users\\letha\\OneDrive\\dotNET_simple\\BlazorApp1_MudBlazor\\wwwroot\\roslibjs\\src\\actionlib\\SimpleActionServer.js",
+      "PackagePath": "staticwebassets\\roslibjs\\src\\actionlib\\SimpleActionServer.js"
+    },
+    {
+      "Id": "C:\\Users\\letha\\OneDrive\\dotNET_simple\\BlazorApp1_MudBlazor\\wwwroot\\roslibjs\\src\\actionlib\\index.js",
+      "PackagePath": "staticwebassets\\roslibjs\\src\\actionlib\\index.js"
+    },
+    {
+      "Id": "C:\\Users\\letha\\OneDrive\\dotNET_simple\\BlazorApp1_MudBlazor\\wwwroot\\roslibjs\\src\\core\\Action.js",
+      "PackagePath": "staticwebassets\\roslibjs\\src\\core\\Action.js"
+    },
+    {
+      "Id": "C:\\Users\\letha\\OneDrive\\dotNET_simple\\BlazorApp1_MudBlazor\\wwwroot\\roslibjs\\src\\core\\Message.js",
+      "PackagePath": "staticwebassets\\roslibjs\\src\\core\\Message.js"
+    },
+    {
+      "Id": "C:\\Users\\letha\\OneDrive\\dotNET_simple\\BlazorApp1_MudBlazor\\wwwroot\\roslibjs\\src\\core\\Param.js",
+      "PackagePath": "staticwebassets\\roslibjs\\src\\core\\Param.js"
+    },
+    {
+      "Id": "C:\\Users\\letha\\OneDrive\\dotNET_simple\\BlazorApp1_MudBlazor\\wwwroot\\roslibjs\\src\\core\\Ros.js",
+      "PackagePath": "staticwebassets\\roslibjs\\src\\core\\Ros.js"
+    },
+    {
+      "Id": "C:\\Users\\letha\\OneDrive\\dotNET_simple\\BlazorApp1_MudBlazor\\wwwroot\\roslibjs\\src\\core\\Service.js",
+      "PackagePath": "staticwebassets\\roslibjs\\src\\core\\Service.js"
+    },
+    {
+      "Id": "C:\\Users\\letha\\OneDrive\\dotNET_simple\\BlazorApp1_MudBlazor\\wwwroot\\roslibjs\\src\\core\\SocketAdapter.js",
+      "PackagePath": "staticwebassets\\roslibjs\\src\\core\\SocketAdapter.js"
+    },
+    {
+      "Id": "C:\\Users\\letha\\OneDrive\\dotNET_simple\\BlazorApp1_MudBlazor\\wwwroot\\roslibjs\\src\\core\\Topic.js",
+      "PackagePath": "staticwebassets\\roslibjs\\src\\core\\Topic.js"
+    },
+    {
+      "Id": "C:\\Users\\letha\\OneDrive\\dotNET_simple\\BlazorApp1_MudBlazor\\wwwroot\\roslibjs\\src\\core\\index.js",
+      "PackagePath": "staticwebassets\\roslibjs\\src\\core\\index.js"
+    },
+    {
+      "Id": "C:\\Users\\letha\\OneDrive\\dotNET_simple\\BlazorApp1_MudBlazor\\wwwroot\\roslibjs\\src\\math\\Pose.js",
+      "PackagePath": "staticwebassets\\roslibjs\\src\\math\\Pose.js"
+    },
+    {
+      "Id": "C:\\Users\\letha\\OneDrive\\dotNET_simple\\BlazorApp1_MudBlazor\\wwwroot\\roslibjs\\src\\math\\Quaternion.js",
+      "PackagePath": "staticwebassets\\roslibjs\\src\\math\\Quaternion.js"
+    },
+    {
+      "Id": "C:\\Users\\letha\\OneDrive\\dotNET_simple\\BlazorApp1_MudBlazor\\wwwroot\\roslibjs\\src\\math\\Transform.js",
+      "PackagePath": "staticwebassets\\roslibjs\\src\\math\\Transform.js"
+    },
+    {
+      "Id": "C:\\Users\\letha\\OneDrive\\dotNET_simple\\BlazorApp1_MudBlazor\\wwwroot\\roslibjs\\src\\math\\Vector3.js",
+      "PackagePath": "staticwebassets\\roslibjs\\src\\math\\Vector3.js"
+    },
+    {
+      "Id": "C:\\Users\\letha\\OneDrive\\dotNET_simple\\BlazorApp1_MudBlazor\\wwwroot\\roslibjs\\src\\math\\index.js",
+      "PackagePath": "staticwebassets\\roslibjs\\src\\math\\index.js"
+    },
+    {
+      "Id": "C:\\Users\\letha\\OneDrive\\dotNET_simple\\BlazorApp1_MudBlazor\\wwwroot\\roslibjs\\src\\tf\\ROS2TFClient.js",
+      "PackagePath": "staticwebassets\\roslibjs\\src\\tf\\ROS2TFClient.js"
+    },
+    {
+      "Id": "C:\\Users\\letha\\OneDrive\\dotNET_simple\\BlazorApp1_MudBlazor\\wwwroot\\roslibjs\\src\\tf\\TFClient.js",
+      "PackagePath": "staticwebassets\\roslibjs\\src\\tf\\TFClient.js"
+    },
+    {
+      "Id": "C:\\Users\\letha\\OneDrive\\dotNET_simple\\BlazorApp1_MudBlazor\\wwwroot\\roslibjs\\src\\tf\\index.js",
+      "PackagePath": "staticwebassets\\roslibjs\\src\\tf\\index.js"
+    },
+    {
+      "Id": "C:\\Users\\letha\\OneDrive\\dotNET_simple\\BlazorApp1_MudBlazor\\wwwroot\\roslibjs\\src\\urdf\\UrdfBox.js",
+      "PackagePath": "staticwebassets\\roslibjs\\src\\urdf\\UrdfBox.js"
+    },
+    {
+      "Id": "C:\\Users\\letha\\OneDrive\\dotNET_simple\\BlazorApp1_MudBlazor\\wwwroot\\roslibjs\\src\\urdf\\UrdfColor.js",
+      "PackagePath": "staticwebassets\\roslibjs\\src\\urdf\\UrdfColor.js"
+    },
+    {
+      "Id": "C:\\Users\\letha\\OneDrive\\dotNET_simple\\BlazorApp1_MudBlazor\\wwwroot\\roslibjs\\src\\urdf\\UrdfCylinder.js",
+      "PackagePath": "staticwebassets\\roslibjs\\src\\urdf\\UrdfCylinder.js"
+    },
+    {
+      "Id": "C:\\Users\\letha\\OneDrive\\dotNET_simple\\BlazorApp1_MudBlazor\\wwwroot\\roslibjs\\src\\urdf\\UrdfJoint.js",
+      "PackagePath": "staticwebassets\\roslibjs\\src\\urdf\\UrdfJoint.js"
+    },
+    {
+      "Id": "C:\\Users\\letha\\OneDrive\\dotNET_simple\\BlazorApp1_MudBlazor\\wwwroot\\roslibjs\\src\\urdf\\UrdfLink.js",
+      "PackagePath": "staticwebassets\\roslibjs\\src\\urdf\\UrdfLink.js"
+    },
+    {
+      "Id": "C:\\Users\\letha\\OneDrive\\dotNET_simple\\BlazorApp1_MudBlazor\\wwwroot\\roslibjs\\src\\urdf\\UrdfMaterial.js",
+      "PackagePath": "staticwebassets\\roslibjs\\src\\urdf\\UrdfMaterial.js"
+    },
+    {
+      "Id": "C:\\Users\\letha\\OneDrive\\dotNET_simple\\BlazorApp1_MudBlazor\\wwwroot\\roslibjs\\src\\urdf\\UrdfMesh.js",
+      "PackagePath": "staticwebassets\\roslibjs\\src\\urdf\\UrdfMesh.js"
+    },
+    {
+      "Id": "C:\\Users\\letha\\OneDrive\\dotNET_simple\\BlazorApp1_MudBlazor\\wwwroot\\roslibjs\\src\\urdf\\UrdfModel.js",
+      "PackagePath": "staticwebassets\\roslibjs\\src\\urdf\\UrdfModel.js"
+    },
+    {
+      "Id": "C:\\Users\\letha\\OneDrive\\dotNET_simple\\BlazorApp1_MudBlazor\\wwwroot\\roslibjs\\src\\urdf\\UrdfSphere.js",
+      "PackagePath": "staticwebassets\\roslibjs\\src\\urdf\\UrdfSphere.js"
+    },
+    {
+      "Id": "C:\\Users\\letha\\OneDrive\\dotNET_simple\\BlazorApp1_MudBlazor\\wwwroot\\roslibjs\\src\\urdf\\UrdfTypes.js",
+      "PackagePath": "staticwebassets\\roslibjs\\src\\urdf\\UrdfTypes.js"
+    },
+    {
+      "Id": "C:\\Users\\letha\\OneDrive\\dotNET_simple\\BlazorApp1_MudBlazor\\wwwroot\\roslibjs\\src\\urdf\\UrdfVisual.js",
+      "PackagePath": "staticwebassets\\roslibjs\\src\\urdf\\UrdfVisual.js"
+    },
+    {
+      "Id": "C:\\Users\\letha\\OneDrive\\dotNET_simple\\BlazorApp1_MudBlazor\\wwwroot\\roslibjs\\src\\urdf\\index.js",
+      "PackagePath": "staticwebassets\\roslibjs\\src\\urdf\\index.js"
+    },
+    {
+      "Id": "C:\\Users\\letha\\OneDrive\\dotNET_simple\\BlazorApp1_MudBlazor\\wwwroot\\roslibjs\\src\\util\\cborTypedArrayTags.js",
+      "PackagePath": "staticwebassets\\roslibjs\\src\\util\\cborTypedArrayTags.js"
+    },
+    {
+      "Id": "C:\\Users\\letha\\OneDrive\\dotNET_simple\\BlazorApp1_MudBlazor\\wwwroot\\roslibjs\\src\\util\\decompressPng.js",
+      "PackagePath": "staticwebassets\\roslibjs\\src\\util\\decompressPng.js"
+    },
+    {
+      "Id": "C:\\Users\\letha\\OneDrive\\dotNET_simple\\BlazorApp1_MudBlazor\\wwwroot\\roslibjs\\src\\util\\shim\\decompressPng.js",
+      "PackagePath": "staticwebassets\\roslibjs\\src\\util\\shim\\decompressPng.js"
+    },
+    {
+      "Id": "C:\\Users\\letha\\OneDrive\\dotNET_simple\\BlazorApp1_MudBlazor\\wwwroot\\roslibjs\\test\\build.bash",
+      "PackagePath": "staticwebassets\\roslibjs\\test\\build.bash"
+    },
+    {
+      "Id": "C:\\Users\\letha\\OneDrive\\dotNET_simple\\BlazorApp1_MudBlazor\\wwwroot\\roslibjs\\test\\cbor.test.js",
+      "PackagePath": "staticwebassets\\roslibjs\\test\\cbor.test.js"
+    },
+    {
+      "Id": "C:\\Users\\letha\\OneDrive\\dotNET_simple\\BlazorApp1_MudBlazor\\wwwroot\\roslibjs\\test\\cdn-import.test.js",
+      "PackagePath": "staticwebassets\\roslibjs\\test\\cdn-import.test.js"
+    },
+    {
+      "Id": "C:\\Users\\letha\\OneDrive\\dotNET_simple\\BlazorApp1_MudBlazor\\wwwroot\\roslibjs\\test\\examples\\check-topics.example.js",
+      "PackagePath": "staticwebassets\\roslibjs\\test\\examples\\check-topics.example.js"
+    },
+    {
+      "Id": "C:\\Users\\letha\\OneDrive\\dotNET_simple\\BlazorApp1_MudBlazor\\wwwroot\\roslibjs\\test\\examples\\fibonacci.example.js",
+      "PackagePath": "staticwebassets\\roslibjs\\test\\examples\\fibonacci.example.js"
+    },
+    {
+      "Id": "C:\\Users\\letha\\OneDrive\\dotNET_simple\\BlazorApp1_MudBlazor\\wwwroot\\roslibjs\\test\\examples\\params.examples.js",
+      "PackagePath": "staticwebassets\\roslibjs\\test\\examples\\params.examples.js"
+    },
+    {
+      "Id": "C:\\Users\\letha\\OneDrive\\dotNET_simple\\BlazorApp1_MudBlazor\\wwwroot\\roslibjs\\test\\examples\\pubsub.example.js",
+      "PackagePath": "staticwebassets\\roslibjs\\test\\examples\\pubsub.example.js"
+    },
+    {
+      "Id": "C:\\Users\\letha\\OneDrive\\dotNET_simple\\BlazorApp1_MudBlazor\\wwwroot\\roslibjs\\test\\examples\\setup_examples.bash",
+      "PackagePath": "staticwebassets\\roslibjs\\test\\examples\\setup_examples.bash"
+    },
+    {
+      "Id": "C:\\Users\\letha\\OneDrive\\dotNET_simple\\BlazorApp1_MudBlazor\\wwwroot\\roslibjs\\test\\examples\\setup_examples.launch",
+      "PackagePath": "staticwebassets\\roslibjs\\test\\examples\\setup_examples.launch"
+    },
+    {
+      "Id": "C:\\Users\\letha\\OneDrive\\dotNET_simple\\BlazorApp1_MudBlazor\\wwwroot\\roslibjs\\test\\examples\\tf.example.js",
+      "PackagePath": "staticwebassets\\roslibjs\\test\\examples\\tf.example.js"
+    },
+    {
+      "Id": "C:\\Users\\letha\\OneDrive\\dotNET_simple\\BlazorApp1_MudBlazor\\wwwroot\\roslibjs\\test\\examples\\tf_service.example.js",
+      "PackagePath": "staticwebassets\\roslibjs\\test\\examples\\tf_service.example.js"
+    },
+    {
+      "Id": "C:\\Users\\letha\\OneDrive\\dotNET_simple\\BlazorApp1_MudBlazor\\wwwroot\\roslibjs\\test\\examples\\topic-listener.example.js",
+      "PackagePath": "staticwebassets\\roslibjs\\test\\examples\\topic-listener.example.js"
+    },
+    {
+      "Id": "C:\\Users\\letha\\OneDrive\\dotNET_simple\\BlazorApp1_MudBlazor\\wwwroot\\roslibjs\\test\\math-examples.test.js",
+      "PackagePath": "staticwebassets\\roslibjs\\test\\math-examples.test.js"
+    },
+    {
+      "Id": "C:\\Users\\letha\\OneDrive\\dotNET_simple\\BlazorApp1_MudBlazor\\wwwroot\\roslibjs\\test\\quaternion.test.js",
+      "PackagePath": "staticwebassets\\roslibjs\\test\\quaternion.test.js"
+    },
+    {
+      "Id": "C:\\Users\\letha\\OneDrive\\dotNET_simple\\BlazorApp1_MudBlazor\\wwwroot\\roslibjs\\test\\service.test.js",
+      "PackagePath": "staticwebassets\\roslibjs\\test\\service.test.js"
+    },
+    {
+      "Id": "C:\\Users\\letha\\OneDrive\\dotNET_simple\\BlazorApp1_MudBlazor\\wwwroot\\roslibjs\\test\\tfclient.test.js",
+      "PackagePath": "staticwebassets\\roslibjs\\test\\tfclient.test.js"
+    },
+    {
+      "Id": "C:\\Users\\letha\\OneDrive\\dotNET_simple\\BlazorApp1_MudBlazor\\wwwroot\\roslibjs\\test\\transform.test.js",
+      "PackagePath": "staticwebassets\\roslibjs\\test\\transform.test.js"
+    },
+    {
+      "Id": "C:\\Users\\letha\\OneDrive\\dotNET_simple\\BlazorApp1_MudBlazor\\wwwroot\\roslibjs\\test\\urdf.test.js",
+      "PackagePath": "staticwebassets\\roslibjs\\test\\urdf.test.js"
+    },
+    {
+      "Id": "C:\\Users\\letha\\OneDrive\\dotNET_simple\\BlazorApp1_MudBlazor\\wwwroot\\roslibjs\\tsconfig.json",
+      "PackagePath": "staticwebassets\\roslibjs\\tsconfig.json"
+    },
+    {
+      "Id": "C:\\Users\\letha\\OneDrive\\dotNET_simple\\BlazorApp1_MudBlazor\\wwwroot\\roslibjs\\vite.config.js",
+      "PackagePath": "staticwebassets\\roslibjs\\vite.config.js"
+    },
+    {
       "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.BlazorApp1_MudBlazor.Microsoft.AspNetCore.StaticWebAssets.props",
       "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
     },

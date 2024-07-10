@@ -1,12 +1,88 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\letha\\OneDrive\\dotNET_simple\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{FFC8BC3D-966B-48B3-981B-B196C7A15EDD}|BlazorRosJs\\BlazorRosJs.csproj|c:\\users\\letha\\onedrive\\dotnet_simple\\blazorrosjs\\components\\pages\\home.razor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FFC8BC3D-966B-48B3-981B-B196C7A15EDD}|BlazorRosJs\\BlazorRosJs.csproj|solutionrelative:blazorrosjs\\components\\pages\\home.razor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FFC8BC3D-966B-48B3-981B-B196C7A15EDD}|BlazorRosJs\\BlazorRosJs.csproj|c:\\users\\letha\\onedrive\\dotnet_simple\\blazorrosjs\\wwwroot\\js\\roslibinterop.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{FFC8BC3D-966B-48B3-981B-B196C7A15EDD}|BlazorRosJs\\BlazorRosJs.csproj|solutionrelative:blazorrosjs\\wwwroot\\js\\roslibinterop.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FFC8BC3D-966B-48B3-981B-B196C7A15EDD}|BlazorRosJs\\BlazorRosJs.csproj|c:\\users\\letha\\onedrive\\dotnet_simple\\blazorrosjs\\components\\app.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{FFC8BC3D-966B-48B3-981B-B196C7A15EDD}|BlazorRosJs\\BlazorRosJs.csproj|solutionrelative:blazorrosjs\\components\\app.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FFC8BC3D-966B-48B3-981B-B196C7A15EDD}|BlazorRosJs\\BlazorRosJs.csproj|c:\\users\\letha\\onedrive\\dotnet_simple\\blazorrosjs\\components\\pages\\home.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{FFC8BC3D-966B-48B3-981B-B196C7A15EDD}|BlazorRosJs\\BlazorRosJs.csproj|solutionrelative:blazorrosjs\\components\\pages\\home.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
-      "DocumentGroups": []
+      "DocumentGroups": [
+        {
+          "DockedWidth": 228,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Home.razor.cs",
+              "DocumentMoniker": "C:\\Users\\letha\\OneDrive\\dotNET_simple\\BlazorRosJs\\Components\\Pages\\Home.razor.cs",
+              "RelativeDocumentMoniker": "BlazorRosJs\\Components\\Pages\\Home.razor.cs",
+              "ToolTip": "C:\\Users\\letha\\OneDrive\\dotNET_simple\\BlazorRosJs\\Components\\Pages\\Home.razor.cs",
+              "RelativeToolTip": "BlazorRosJs\\Components\\Pages\\Home.razor.cs",
+              "ViewState": "AQIAAKkAAAAAAAAAAAAUwBIAAAAXAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-10T06:22:41.091Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "App.razor",
+              "DocumentMoniker": "C:\\Users\\letha\\OneDrive\\dotNET_simple\\BlazorRosJs\\Components\\App.razor",
+              "RelativeDocumentMoniker": "BlazorRosJs\\Components\\App.razor",
+              "ToolTip": "C:\\Users\\letha\\OneDrive\\dotNET_simple\\BlazorRosJs\\Components\\App.razor",
+              "RelativeToolTip": "BlazorRosJs\\Components\\App.razor",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABcAAAAYAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-07-10T06:20:54.13Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "roslibInterop.js",
+              "DocumentMoniker": "C:\\Users\\letha\\OneDrive\\dotNET_simple\\BlazorRosJs\\wwwroot\\js\\roslibInterop.js",
+              "RelativeDocumentMoniker": "BlazorRosJs\\wwwroot\\js\\roslibInterop.js",
+              "ToolTip": "C:\\Users\\letha\\OneDrive\\dotNET_simple\\BlazorRosJs\\wwwroot\\js\\roslibInterop.js",
+              "RelativeToolTip": "BlazorRosJs\\wwwroot\\js\\roslibInterop.js",
+              "ViewState": "AQIAAD0AAAAAAAAAAAAYwAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2024-07-10T06:20:42.654Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Home.razor",
+              "DocumentMoniker": "C:\\Users\\letha\\OneDrive\\dotNET_simple\\BlazorRosJs\\Components\\Pages\\Home.razor",
+              "RelativeDocumentMoniker": "BlazorRosJs\\Components\\Pages\\Home.razor",
+              "ToolTip": "C:\\Users\\letha\\OneDrive\\dotNET_simple\\BlazorRosJs\\Components\\Pages\\Home.razor",
+              "RelativeToolTip": "BlazorRosJs\\Components\\Pages\\Home.razor",
+              "ViewState": "AQIAABgAAAAAAAAAAAAAAD8AAAAWAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-07-09T07:49:05.786Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
     }
   ]
 }
