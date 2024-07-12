@@ -21,8 +21,8 @@
       "PackagePath": "staticwebassets\\favicon.png"
     },
     {
-      "Id": "C:\\Users\\letha\\OneDrive\\dotNET_simple\\BlazorRosJs\\wwwroot\\js\\initMap.js",
-      "PackagePath": "staticwebassets\\js\\initMap.js"
+      "Id": "C:\\Users\\letha\\OneDrive\\dotNET_simple\\BlazorRosJs\\wwwroot\\js\\roslibConnector.js",
+      "PackagePath": "staticwebassets\\js\\roslibConnector.js"
     },
     {
       "Id": "C:\\Users\\letha\\OneDrive\\dotNET_simple\\BlazorRosJs\\wwwroot\\js\\roslibInterop.js",

@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("SimpleOpcUaClient")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+1a037a6f735b0a15f68c56df3bb604ac82c6370f")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7bd8945a39ef5e45d752cf8907981fc697a972c4")]
 [assembly: System.Reflection.AssemblyProductAttribute("SimpleOpcUaClient")]
 [assembly: System.Reflection.AssemblyTitleAttribute("SimpleOpcUaClient")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

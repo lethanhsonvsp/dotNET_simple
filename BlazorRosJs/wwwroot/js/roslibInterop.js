@@ -64,7 +64,20 @@
         });
     }
 
-    function initMap() {
+    function publishMessage(topicName, messageType, message) {
+        var topic = new ROSLIB.Topic({
+            ros: ros,
+            name: topicName,
+            messageType: messageType
+        });
+
+        var rosMessage = new ROSLIB.Message(message);
+
+        topic.publish(rosMessage);
+        console.log('Published message to ' + topicName);
+    }
+
+    function initMap(robotImageUrl) {
         if (typeof ROS2D === 'undefined' || typeof ros === 'undefined') {
             console.error('ROS2D or ros is not defined');
             return;
@@ -72,23 +85,30 @@
 
         // Create the main viewer.
         var viewer = new ROS2D.Viewer({
-            divID: 'map',
-            width: 640,
-            height: 480,
+            divID: '/map',
+            width: 400, 
+            height: 400,
             context2dOptions: { willReadFrequently: true }
         });
 
         // Setup the map client.
-        var gridClient = new NAV2D.OccupancyGridClientNav({
+        var gridClient = new NAV2D.ImageMapClientNav({
             ros: ros,
             rootObject: viewer.scene,
             viewer: viewer,
             serverName: "/move_base",
             withOrientation: true,
+            image: robotImageUrl 
         });
+    }
+
+    function subscribeOdom() {
+        subscribeTopic('/odom', 'nav_msgs/msgs/Odometry', 'ReceiveOdomMessage');
     }
 
     window.initMap = initMap;
     window.connectToRos = connectToRos;
     window.subscribeTopic = subscribeTopic;
+    window.subscribeOdom = subscribeOdom;
+    window.publishMessage = publishMessage;
 })();

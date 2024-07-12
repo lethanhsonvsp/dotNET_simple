@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\Ros2Blazor.props" />
+</Project>

@@ -1,4 +1,5 @@
 @page "/button"
+@using RosbridgeNet.RosbridgeClient.Common.Attributes
 @using RosbridgeNet.RosbridgeClient.Common.Interfaces
 @using RosbridgeNet.RosbridgeClient.ProtocolV2.Generics
 @inject IRosbridgeMessageDispatcher MessageDispatcher
@@ -212,4 +213,29 @@
     {
         // Dọn dẹp tài nguyên nếu cần
     }
+
+    [RosMessageType("geometry_msgs/Twist")]
+    public class Twist
+    {
+        public Vector? linear { get; set; }
+        public Vector? angular { get; set; }
+
+        public override string ToString()
+        {
+            return $"linear: {linear}, angular: {angular}";
+        }
+    }
+
+    public class Vector
+    {
+        public float x { get; set; }
+        public float y { get; set; }
+        public float z { get; set; }
+
+        public override string ToString()
+        {
+            return $"x: {x}, y: {y}, z: {z}";
+        }
+    }
+
 }

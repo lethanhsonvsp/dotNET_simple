@@ -15,6 +15,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SimpleOpcUaServer", "Simple
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlazorRosJs", "BlazorRosJs\BlazorRosJs.csproj", "{FFC8BC3D-966B-48B3-981B-B196C7A15EDD}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ros2Blazor", "Ros2Blazor\Ros2Blazor.csproj", "{C805B020-D879-46C2-A3D3-8D274D46A83A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -45,6 +47,10 @@ Global
 		{FFC8BC3D-966B-48B3-981B-B196C7A15EDD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FFC8BC3D-966B-48B3-981B-B196C7A15EDD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FFC8BC3D-966B-48B3-981B-B196C7A15EDD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C805B020-D879-46C2-A3D3-8D274D46A83A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C805B020-D879-46C2-A3D3-8D274D46A83A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C805B020-D879-46C2-A3D3-8D274D46A83A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C805B020-D879-46C2-A3D3-8D274D46A83A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

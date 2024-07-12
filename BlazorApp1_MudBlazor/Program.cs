@@ -1,21 +1,19 @@
-//Program.cs
-using MudBlazor.Services;
 using BlazorApp1_MudBlazor.Components;
-using System.Net.WebSockets;
-using RosbridgeNet.RosbridgeClient.Common;
+using MudBlazor.Services;
 using RosbridgeNet.RosbridgeClient.Common.Interfaces;
+using RosbridgeNet.RosbridgeClient.Common;
 using RosbridgeNet.RosbridgeClient.ProtocolV2;
+using System.Net.WebSockets;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddRazorComponents()
     .AddInteractiveServerComponents();
-
-// Add RosbridgeNet services
+builder.Services.AddMudServices();// Add RosbridgeNet services
 builder.Services.AddScoped<IRosbridgeMessageDispatcher>(sp =>
 {
-    var webSocketUri = new Uri("ws://192.168.137.218:9090");
+    var webSocketUri = new Uri("ws://192.168.137.109:9090");
     var cts = new CancellationTokenSource();
 
     var socket = new Socket(new ClientWebSocket(), webSocketUri, cts);
@@ -24,19 +22,18 @@ builder.Services.AddScoped<IRosbridgeMessageDispatcher>(sp =>
     messageDispatcher.StartAsync().Wait();
     return messageDispatcher;
 });
-
-builder.Services.AddMudServices();
-
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())
 {
     app.UseExceptionHandler("/Error", createScopeForErrors: true);
+    // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
     app.UseHsts();
 }
 
 app.UseHttpsRedirection();
+
 app.UseStaticFiles();
 app.UseAntiforgery();
 

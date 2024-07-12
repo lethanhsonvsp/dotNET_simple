@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "QKWPD0DZKDG2iqrxvcEAdikNF4vFxOwx0PqsU3whg7E=",
+  "Hash": "8BcoMac+S3bgfakT8GOxTxVQX77NhEZ7Z75IscL3bi8=",
   "Source": "BlazorRosJs",
   "BasePath": "_content/BlazorRosJs",
   "Mode": "Default",
@@ -169,12 +169,12 @@
       "OriginalItemSpec": "wwwroot\\favicon.png"
     },
     {
-      "Identity": "C:\\Users\\letha\\OneDrive\\dotNET_simple\\BlazorRosJs\\wwwroot\\js\\initMap.js",
+      "Identity": "C:\\Users\\letha\\OneDrive\\dotNET_simple\\BlazorRosJs\\wwwroot\\js\\roslibConnector.js",
       "SourceId": "BlazorRosJs",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\letha\\OneDrive\\dotNET_simple\\BlazorRosJs\\wwwroot\\",
       "BasePath": "_content/BlazorRosJs",
-      "RelativePath": "js/initMap.js",
+      "RelativePath": "js/roslibConnector.js",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -185,7 +185,7 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\js\\initMap.js"
+      "OriginalItemSpec": "wwwroot\\js\\roslibConnector.js"
     },
     {
       "Identity": "C:\\Users\\letha\\OneDrive\\dotNET_simple\\BlazorRosJs\\wwwroot\\js\\roslibInterop.js",

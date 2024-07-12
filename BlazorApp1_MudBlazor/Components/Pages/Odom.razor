@@ -1,4 +1,5 @@
 ﻿@page "/odom"
+@inject IJSRuntime JSRuntime
 @inject IRosbridgeMessageDispatcher MessageDispatcher
 @rendermode InteractiveServer
 @using RosbridgeNet.RosbridgeClient.Common.Attributes
@@ -8,34 +9,163 @@
 @using RosbridgeNet.RosbridgeClient.Common.Interfaces
 @using Microsoft.AspNetCore.Components.Web
 @using Newtonsoft.Json.Linq
-@using MudBlazor
 @using System.Net.WebSockets
+@using System.Text
 
 <MudThemeProvider />
 <MudDialogProvider />
 <MudSnackbarProvider />
 
+<MudContainer Style="width: 180px; height: 100px; padding: 16px; position: absolute; left: 250px;">
+    <MudGrid>
+        <MudItem xs="12">
+            <MudContainer Style="width: 100%; height: 100%; background-color: #b5b4b5; padding: 16px; border-radius: 16px;">
+                <h5 id="ros-status" style="color: red">Disconnected</h5>
+            </MudContainer>
+        </MudItem>
+    </MudGrid>
+</MudContainer>
 
-<h3>Blazor Rosbridge Subscriber</h3>
 
-<div>
-    <p>Position: x = @positionXFormatted, y = @positionYFormatted, z = @positionZFormatted</p>
-    <p>Orientation: x = @orientationXFormatted, y = @orientationYFormatted, z = @orientationZFormatted, w = @orientationWFormatted</p>
-</div>
+<MudContainer MaxWidth="MaxWidth.Large" Style="padding: 16px;">
+    <MudGrid>
+        <MudItem xs="12" md="3">
+            <MudContainer Style="width: 290px; height: 330px; background-color: #b5b4b5; padding: 16px; border-radius: 16px;">
+                <p>Nhấn các phím để điều khiển</p>
+                <div tabindex="0" style="border: 1px solid black; padding: 10px; width: 260px; height: 270px; overflow: auto;" @onkeydown="HandleKeyPress">
+                    <table style="width: 100%; height: 100%; border-collapse: collapse; text-align: center;">
+                        <tr>
+                            <td></td>
+                            <td>
+                                <MudButton Variant="Variant.Filled" Color="Color.Primary" Style="width: 50px; height: 50px; margin: 5px;" @onclick="MoveForward"><b>i</b></MudButton>
+                            </td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <MudButton Variant="Variant.Filled" Color="Color.Primary" Style="width: 50px; height: 50px; margin: 5px;" @onclick="MoveForwardLeft"><b>u</b></MudButton>
+                            </td>
+                            <td>
+                                <MudButton Variant="Variant.Filled" Color="Color.Primary" Style="width: 50px; height: 50px; margin: 5px;" @onclick="Stop"><b>k</b></MudButton>
+                            </td>
+                            <td>
+                                <MudButton Variant="Variant.Filled" Color="Color.Primary" Style="width: 50px; height: 50px; margin: 5px;" @onclick="MoveForwardRight"><b>o</b></MudButton>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <MudButton Variant="Variant.Filled" Color="Color.Primary" Style="width: 50px; height: 50px; margin: 5px;" @onclick="TurnCounterClockwise"><b>j</b></MudButton>
+                            </td>
+                            <td>
+                                <MudButton Variant="Variant.Filled" Color="Color.Primary" Style="width: 50px; height: 50px; margin: 5px;" @onclick="MoveBackward"><b>,</b></MudButton>
+                            </td>
+                            <td>
+                                <MudButton Variant="Variant.Filled" Color="Color.Primary" Style="width: 50px; height: 50px; margin: 5px;" @onclick="TurnClockwise"><b>l</b></MudButton>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>
+                                <MudButton Variant="Variant.Filled" Color="Color.Primary" Style="width: 50px; height: 50px; margin: 5px;" @onclick="MoveBackwardLeft"><b>m</b></MudButton>
+                            </td>
+                            <td></td>
+                        </tr>
+                    </table>
+                </div>
+            </MudContainer>
+        </MudItem>
+
+        <MudItem xs="12" md="3">
+            <MudContainer Style="width: 290px; height: 330px; background-color: #b5b4b5; padding: 16px; border-radius: 16px;">
+                <h5>Odom Data</h5>
+                <p>Position: <br />X: @positionXFormatted<br />Y: @positionYFormatted<br />Z: @positionZFormatted</p>
+                <p>Orientation: <br />X: @orientationXFormatted<br />Y: @orientationYFormatted<br />Z: @orientationZFormatted<br />W: @orientationWFormatted</p>
+            </MudContainer>
+        </MudItem>
+
+    </MudGrid>
+</MudContainer>
+<div id="map" style="width: 400px; height: 400px; background-color: #b5b4b5; border-radius: 16px;"></div>
+
 
 @code {
-    private double positionX, positionY, positionZ;
-    private double orientationX, orientationY, orientationZ, orientationW;
-    // Biến để lưu trữ giá trị đã được định dạng
     private string? positionXFormatted, positionYFormatted, positionZFormatted;
     private string? orientationXFormatted, orientationYFormatted, orientationZFormatted, orientationWFormatted;
 
+    private double positionX, positionY, positionZ;
+    private double orientationX, orientationY, orientationZ, orientationW;
+
+    private static Odom? instance;
+
     private ClientWebSocket rosSocket = new ClientWebSocket();
 
-    // Khởi tạo và đăng ký sự kiện
+    public float a = 0.2f;
+    public float b = 0.5f;
+
+    private MovementHandler? _movementHandler;
+    private KeyPressHandler? _keyPressHandler;
+
+    public Odom()
+    {
+    }
+
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (firstRender)
+        {
+            instance = this;
+            await InitializeBlazor();
+            await ConnectToRos();
+            await MapViewer();
+
+            var publisher = new RosPublisher<Twist>(MessageDispatcher, "/cmd_vel");
+            await publisher.AdvertiseAsync();
+
+            _movementHandler = new MovementHandler(publisher, a, b);
+            _keyPressHandler = new KeyPressHandler(_movementHandler);
+        }
+    }
+
+    private async Task InitializeBlazor()
+    {
+        await JSRuntime.InvokeVoidAsync("console.log", "Blazor initialized");
+    }
+
+    private async Task ConnectToRos()
+    {
+        await JSRuntime.InvokeVoidAsync("connectToRos", "ws://192.168.137.109:9090");
+    }
+
+    private async Task MapViewer()
+    {
+        await JSRuntime.InvokeVoidAsync("initMap");
+
+    }
+
+    [JSInvokable]
+    public static Task OnRosConnected()
+    {
+        Console.WriteLine("Connected to ROS from Blazor.");
+        return Task.CompletedTask;
+    }
+
+    [JSInvokable]
+    public static Task OnRosError(string errorMessage)
+    {
+        Console.WriteLine($"Error: {errorMessage}");
+        return Task.CompletedTask;
+    }
+
+    [JSInvokable]
+    public static Task OnRosClosed()
+    {
+        Console.WriteLine("Disconnected from ROS.");
+        return Task.CompletedTask;
+    }
+
     protected override async Task OnInitializedAsync()
     {
-        //Console.WriteLine("Component Initialized");
+        await base.OnInitializedAsync();
         await ConnectRosbridge();
     }
 
@@ -43,15 +173,13 @@
     {
         try
         {
-            Uri serverUri = new Uri("ws://192.168.137.218:9090");
+            Uri serverUri = new Uri("ws://192.168.137.109:9090");
             await rosSocket.ConnectAsync(serverUri, CancellationToken.None);
 
-            // Subscribe to the topic "/odom"
             string subscribeRequest = "{\"op\":\"subscribe\",\"topic\":\"/odom\"}";
-            byte[] subscribeRequestBytes = System.Text.Encoding.UTF8.GetBytes(subscribeRequest);
+            byte[] subscribeRequestBytes = Encoding.UTF8.GetBytes(subscribeRequest);
             await rosSocket.SendAsync(new ArraySegment<byte>(subscribeRequestBytes), WebSocketMessageType.Text, true, CancellationToken.None);
 
-            // Start receiving messages
             _ = ReceiveMessages();
         }
         catch (Exception ex)
@@ -70,8 +198,7 @@
                 var result = await rosSocket.ReceiveAsync(new ArraySegment<byte>(buffer), CancellationToken.None);
                 if (result.Count > 0)
                 {
-                    string odomData = System.Text.Encoding.UTF8.GetString(buffer, 0, result.Count);
-                    //Console.WriteLine($"Received data: {odomData}");
+                    string odomData = Encoding.UTF8.GetString(buffer, 0, result.Count);
                     ExtractMessage(odomData);
                     await InvokeAsync(StateHasChanged);
                 }
@@ -96,7 +223,6 @@
                 positionX = position.Value<double>("x");
                 positionY = position.Value<double>("y");
                 positionZ = position.Value<double>("z");
-                // Định dạng giá trị
                 positionXFormatted = positionX.ToString("F2");
                 positionYFormatted = positionY.ToString("F2");
                 positionZFormatted = positionZ.ToString("F2");
@@ -108,7 +234,6 @@
                 orientationY = orientation.Value<double>("y");
                 orientationZ = orientation.Value<double>("z");
                 orientationW = orientation.Value<double>("w");
-                // Định dạng giá trị
                 orientationXFormatted = orientationX.ToString("F2");
                 orientationYFormatted = orientationY.ToString("F2");
                 orientationZFormatted = orientationZ.ToString("F2");
@@ -120,4 +245,87 @@
             Console.WriteLine($"Error extracting message: {ex.Message}");
         }
     }
+
+    private async Task HandleKeyPress(KeyboardEventArgs e)
+    {
+        if (_keyPressHandler != null)
+        {
+            await _keyPressHandler.HandleKeyPress(e);
+        }
+    }
+
+    [RosMessageType("nav_msgs/msgs/Odometry")]
+    public class Pose
+    {
+        public VectorO? position { get; set; }
+        public VectorO? orientation { get; set; }
+
+        public override string ToString()
+        {
+            return $"linear: {position}, angular: {orientation}";
+        }
+    }
+
+    public class VectorO
+    {
+        public float x { get; set; }
+        public float y { get; set; }
+        public float z { get; set; }
+        public float w { get; set; }
+
+        public override string ToString()
+        {
+            return $"x: {x}, y: {y}, z: {z}, w: {w}";
+        }
+    }
+
+    [RosMessageType("geometry_msgs/Twist")]
+    public class Twist
+    {
+        public Vector? linear { get; set; }
+        public Vector? angular { get; set; }
+
+        public override string ToString()
+        {
+            return $"linear: {linear}, angular: {angular}";
+        }
+    }
+
+    public class Vector
+    {
+        public float x { get; set; }
+        public float y { get; set; }
+        public float z { get; set; }
+
+        public override string ToString()
+        {
+            return $"x: {x}, y: {y}, z: {z}";
+        }
+    }
+
+    private void Test()
+    {
+        Console.WriteLine("test");
+    }
+
+    public void Dispose()
+    {
+        // Dọn dẹp tài nguyên nếu cần
+    }
+    private async Task MoveForward()
+    {
+        if (_movementHandler != null)
+        {
+            await _movementHandler.MoveForward();
+        }
+    }
+    private async Task MoveForwardLeft() => await _movementHandler?.MoveForwardLeft();
+    private async Task MoveForwardRight() => await _movementHandler?.MoveForwardRight();
+    private async Task Stop() => await _movementHandler?.Stop();
+    private async Task TurnClockwise() => await _movementHandler?.TurnClockwise();
+    private async Task TurnCounterClockwise() => await _movementHandler?.TurnCounterClockwise();
+    private async Task MoveBackward() => await _movementHandler?.MoveBackward();
+    private async Task MoveBackwardLeft() => await _movementHandler?.MoveBackwardLeft();
+    private async Task MoveBackwardRight() => await _movementHandler?.MoveBackwardRight();
+
 }

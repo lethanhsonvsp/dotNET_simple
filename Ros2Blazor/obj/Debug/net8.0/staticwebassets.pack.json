@@ -1,0 +1,41 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\letha\\OneDrive\\dotNET_simple\\Ros2Blazor\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\Ros2Blazor.bundle.scp.css",
+      "PackagePath": "staticwebassets\\Ros2Blazor.bundle.scp.css"
+    },
+    {
+      "Id": "C:\\Users\\letha\\OneDrive\\dotNET_simple\\Ros2Blazor\\wwwroot\\app.css",
+      "PackagePath": "staticwebassets\\app.css"
+    },
+    {
+      "Id": "C:\\Users\\letha\\OneDrive\\dotNET_simple\\Ros2Blazor\\wwwroot\\bootstrap\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\bootstrap\\bootstrap.min.css"
+    },
+    {
+      "Id": "C:\\Users\\letha\\OneDrive\\dotNET_simple\\Ros2Blazor\\wwwroot\\bootstrap\\bootstrap.min.css.map",
+      "PackagePath": "staticwebassets\\bootstrap\\bootstrap.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\letha\\OneDrive\\dotNET_simple\\Ros2Blazor\\wwwroot\\favicon.png",
+      "PackagePath": "staticwebassets\\favicon.png"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.Ros2Blazor.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.Ros2Blazor.props",
+      "PackagePath": "build\\Ros2Blazor.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.Ros2Blazor.props",
+      "PackagePath": "buildMultiTargeting\\Ros2Blazor.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.Ros2Blazor.props",
+      "PackagePath": "buildTransitive\\Ros2Blazor.props"
+    }
+  ],
+  "ElementsToRemove": []
+}
